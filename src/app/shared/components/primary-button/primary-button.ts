@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   imports: [],
-  selector: 'app-primary-button',
+  selector: 'a[appPrimaryButton], button[appPrimaryButton]',
   styleUrl: './primary-button.scss',
   templateUrl: './primary-button.html',
 })

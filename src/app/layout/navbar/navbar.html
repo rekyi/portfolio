@@ -1,1 +1,36 @@
-<p>navbar works!</p>
+<header>
+  <nav class="content" aria-label="Main">
+    <a class="logo" routerLink="/" aria-label="Home" (click)="closeMenu()">
+      <img src="/icons/logo_placeholder.gif" alt="" width="57" height="72" />
+    </a>
+
+    <button
+      class="burger"
+      type="button"
+      aria-controls="main-menu"
+      [attr.aria-expanded]="isMenuOpen()"
+      [attr.aria-label]="isMenuOpen() ? 'Close menu' : 'Open menu'"
+      (click)="toggleMenu()"
+    >
+      @if (isMenuOpen()) {
+        <img src="/icons/close_menu.svg" alt="" width="35" height="32" />
+      } @else {
+        <img src="/icons/burger_menu.svg" alt="" width="32" height="32" />
+      }
+    </button>
+
+    <div id="main-menu" class="menu" [class.open]="isMenuOpen()">
+      <ul class="nav-links">
+        <li><a routerLink="/" fragment="about" (click)="closeMenu()">Why me</a></li>
+        <li><a routerLink="/" fragment="skills" (click)="closeMenu()">Skills</a></li>
+        <li><a routerLink="/" fragment="projects" (click)="closeMenu()">Projects</a></li>
+        <li><a routerLink="/" fragment="contact" (click)="closeMenu()">Contact</a></li>
+      </ul>
+
+      <div class="language-switch">
+        <button type="button">DE</button>
+        <button type="button">EN</button>
+      </div>
+    </div>
+  </nav>
+</header>
