@@ -47,4 +47,14 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+
+button,
+summary,
+input[type='checkbox'] {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
 /* #endregion */

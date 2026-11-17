@@ -23,3 +23,18 @@
   align-items: $align;
   gap: $gap;
 }
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin focus-ring($color: var(--primary-clr)) {
+  &:focus-visible {
+    outline: 2px solid $color;
+    outline-offset: 4px;
+  }
+}
