@@ -5,5 +5,11 @@
 .content {
   max-width: 90rem;
   margin-inline: auto;
-  padding-inline: clamp(1rem, 5vw, 6rem);
+  padding-inline: clamp(1rem, 5vw, 4.5rem);
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--background);
+  color: var(--secondary-clr);
 }
