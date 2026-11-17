@@ -1,3 +1,9 @@
 @use './styles/fonts';
 @use './styles/reset';
 @use './styles/variables';
+
+.content {
+  max-width: 90rem;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 5vw, 6rem);
+}
