@@ -1,10 +1,185 @@
 @use 'mixins' as *;
 
 :host {
+  margin-top: calc(-1 * var(--element-nav-height-mobile));
+
   display: block;
 
   @include desktop {
     margin-top: -100vh;
     margin-top: -100dvh;
+  }
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  height: 100dvh;
+  padding-block: var(--element-nav-height-mobile)
+    clamp(1rem, 100vh - 41rem, var(--element-nav-height-mobile));
+  padding-block: var(--element-nav-height-mobile)
+    clamp(1rem, 100dvh - 41rem, var(--element-nav-height-mobile));
+
+  @include flex(column, center, center, 0.625rem);
+
+  @include desktop {
+    padding-block: 0 var(--element-nav-height);
+    padding-inline: clamp(2rem, 7.57vw, 6.8125rem);
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+
+.portrait {
+  position: relative;
+  width: min(19.5rem, 83.2vw, 38.4vh);
+  width: min(19.5rem, 83.2vw, 38.4dvh);
+  aspect-ratio: 312 / 360;
+
+  flex-shrink: 0;
+  isolation: isolate;
+
+  &::before {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: -1;
+    aspect-ratio: 312 / 326;
+
+    background: url('/icons/mobile_ellipse_pic.svg') center / contain no-repeat;
+
+    content: '';
+  }
+
+  @include desktop {
+    width: auto;
+    height: min(89%, 45.9vw, 41.3125rem);
+    aspect-ratio: 588 / 661;
+
+    align-self: flex-end;
+
+    &::before {
+      top: 8%;
+      bottom: auto;
+      aspect-ratio: 580 / 617;
+
+      background-image: url('/icons/desktop_ellipse_pic_1.svg');
+    }
+
+    @include hover {
+      &::before {
+        background-image: url('/icons/desktop_ellipse_pic_2.svg');
+      }
+    }
+  }
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: top;
+    mask:
+      url('/icons/mobile_ellipse_pic.svg') bottom / 100% auto no-repeat,
+      linear-gradient(var(--background) 0 0) top / 100% 30% no-repeat;
+
+    @include desktop {
+      mask: none;
+    }
+  }
+}
+
+.intro {
+  text-align: center;
+
+  @include flex(column, center, center);
+
+  @include desktop {
+    padding-top: 5.25rem;
+    flex: 1;
+  }
+}
+
+.logo {
+  width: auto;
+  height: 4.5rem;
+  margin-bottom: 2.875rem;
+
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+h1 {
+  font-family: var(--font-headline);
+  font-size: clamp(2.25rem, 12.8vw, 3rem);
+  font-weight: 400;
+  line-height: 1;
+
+  @include desktop {
+    font-size: clamp(3rem, 6.1vw, 5.5rem);
+  }
+}
+
+.job-title {
+  margin-top: 0.75rem;
+
+  font-size: clamp(1.25rem, 6.4vw, 1.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+
+  @include desktop {
+    margin-top: 1.45rem;
+    font-size: clamp(1.5rem, 2.78vw, 2.5rem);
+  }
+}
+
+.scroll-down {
+  width: 2.375rem;
+  height: 5.5rem;
+  margin-top: 1.6rem;
+  border: 1px solid var(--primary-clr);
+  border-radius: 2rem;
+
+  display: grid;
+  place-items: center;
+  transition: background-color 200ms ease;
+
+  @include hover {
+    background-color: color-mix(in srgb, var(--primary-clr) 20%, transparent);
+  }
+
+  @include focus-ring;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
+  @include desktop {
+    margin-top: clamp(3rem, 17.6vh, 9.3125rem);
+  }
+
+  img {
+    width: auto;
+    height: 3rem;
+
+    rotate: 180deg;
+  }
+}
+
+.social {
+  display: none;
+
+  @include desktop {
+    position: absolute;
+    top: 6.75rem;
+    inset-inline-end: calc(clamp(2rem, 7.57vw, 6.8125rem) + 0.5rem);
+
+    display: block;
   }
 }

@@ -1,2 +1,22 @@
-<p>hero works!</p>
-<app-social-links />
+<section id="hero" class="content">
+  <div class="portrait">
+    <img
+      src="/images/pic_placeholder.png"
+      alt="Portrait of Claudia Fohrer"
+      width="580"
+      height="680"
+      fetchpriority="high"
+    />
+  </div>
+
+  <div class="intro">
+    <img class="logo" src="/icons/logo_placeholder.gif" alt="" width="57" height="72" />
+    <h1>Blub</h1>
+    <p class="job-title">Blub Developer</p>
+    <a class="scroll-down" routerLink="/" fragment="about" aria-label="Scroll to Why me">
+      <img src="/icons/arrow_mob.svg" alt="" width="16" height="34" />
+    </a>
+  </div>
+
+  <app-social-links class="social" />
+</section>
