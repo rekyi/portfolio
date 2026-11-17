@@ -1,5 +1,15 @@
 @use 'mixins' as *;
 
+// Tall desktop screens (Figma widescreen design): the group no longer stands on the navbar
+// but is centered vertically, and the photo is cut along the bottom of the shape.
+@mixin tall-screen {
+  @include desktop {
+    @media (min-height: 56.25rem) {
+      @content;
+    }
+  }
+}
+
 :host {
   margin-top: calc(-1 * var(--element-nav-height-mobile));
 
@@ -12,7 +22,6 @@
 }
 
 section {
-  position: relative;
   height: 100vh;
   height: 100dvh;
   padding-block: var(--element-nav-height-mobile)
@@ -22,12 +31,21 @@ section {
 
   @include flex(column, center, center, 0.625rem);
 
+  // Desktop: portrait on the left, intro centered in the remaining space and vertically
+  // centered on the portrait. The whole group stands on the navbar.
   @include desktop {
     padding-block: 0 var(--element-nav-height);
     padding-inline: clamp(2rem, 7.57vw, 6.8125rem);
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 2rem;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-content: end;
+    align-items: center;
+    gap: clamp(1.5rem, 2.43vw, 2.1875rem);
+  }
+
+  @include tall-screen {
+    align-content: center;
   }
 }
 
@@ -54,10 +72,9 @@ section {
 
   @include desktop {
     width: auto;
-    height: min(89%, 45.9vw, 41.3125rem);
+    height: min(calc((100vh - var(--element-nav-height)) * 0.89), 45.9vw, 41.3125rem);
+    height: min(calc((100dvh - var(--element-nav-height)) * 0.89), 45.9vw, 41.3125rem);
     aspect-ratio: 588 / 661;
-
-    align-self: flex-end;
 
     &::before {
       top: 8%;
@@ -70,6 +87,21 @@ section {
     @include hover {
       &::before {
         background-image: url('/icons/desktop_ellipse_pic_2.svg');
+      }
+    }
+  }
+
+  @include tall-screen {
+    &::before {
+      top: auto;
+      bottom: 0;
+    }
+
+    @include hover {
+      img {
+        mask:
+          url('/icons/desktop_ellipse_pic_2.svg') bottom / 97.46% auto no-repeat,
+          linear-gradient(var(--background) 0 0) top / 100% 30% no-repeat;
       }
     }
   }
@@ -89,6 +121,12 @@ section {
     @include desktop {
       mask: none;
     }
+
+    @include tall-screen {
+      mask:
+        url('/icons/desktop_ellipse_pic_1.svg') bottom / 100% auto no-repeat,
+        linear-gradient(var(--background) 0 0) top / 100% 30% no-repeat;
+    }
   }
 }
 
@@ -98,8 +136,9 @@ section {
   @include flex(column, center, center);
 
   @include desktop {
-    padding-top: 5.25rem;
-    flex: 1;
+    position: relative;
+
+    justify-self: center;
   }
 }
 
@@ -172,13 +211,14 @@ h1 {
   }
 }
 
+// Figma: the icons sit at the right edge of the intro, about 53px above the logo.
 .social {
   display: none;
 
   @include desktop {
     position: absolute;
-    top: 6.75rem;
-    inset-inline-end: calc(clamp(2rem, 7.57vw, 6.8125rem) + 0.5rem);
+    top: -3.3125rem;
+    inset-inline-end: -0.5rem;
 
     display: block;
   }

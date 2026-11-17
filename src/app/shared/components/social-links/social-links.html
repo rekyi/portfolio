@@ -1,1 +1,16 @@
-<p>social-links works!</p>
+<ul class="links" [class.horizontal]="variant() === 'footer'">
+  @for (link of links; track link.url) {
+    <li>
+      <a
+        class="link"
+        [href]="link.url"
+        [attr.target]="link.isExternal ? '_blank' : null"
+        [attr.rel]="link.isExternal ? 'noopener noreferrer' : null"
+        [attr.aria-label]="link.label"
+      >
+        <img [src]="link.icons[variant()].default" alt="" width="30" height="30" />
+        <img class="icon-hover" [src]="link.icons[variant()].hover" alt="" width="30" height="30" />
+      </a>
+    </li>
+  }
+</ul>

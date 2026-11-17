@@ -1,0 +1,44 @@
+@use 'mixins' as *;
+
+:host {
+  padding-block: 0.75rem;
+  padding-inline: 1.5rem;
+  border: 1px solid var(--primary-clr);
+  border-radius: 2rem;
+
+  background-color: var(--primary-clr);
+  color: var(--background);
+  font-size: 1rem;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease;
+
+  @include hover {
+    border-color: var(--secondary-clr);
+    background-color: var(--secondary-clr);
+  }
+
+  @include focus-ring;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+:host(:disabled) {
+  border-color: color-mix(in srgb, var(--secondary-clr) 40%, transparent);
+
+  background-color: transparent;
+  color: color-mix(in srgb, var(--secondary-clr) 40%, transparent);
+
+  cursor: not-allowed;
+}
