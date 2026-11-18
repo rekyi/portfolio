@@ -1,0 +1,209 @@
+@use 'mixins' as *;
+
+section {
+  padding-top: 5rem;
+
+  line-height: 1.2;
+
+  @include flex(column, center, center, 2.25rem);
+
+  @include desktop {
+    padding-top: 6.5rem;
+
+    gap: 5.25rem;
+  }
+}
+
+.skills-body {
+  width: 100%;
+
+  @include flex(column, center, center, 2.5rem);
+
+  @include desktop {
+    max-width: 53.75rem;
+
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.skill-list {
+  padding: 0;
+
+  list-style: none;
+
+  flex-wrap: wrap;
+  @include flex(row, center, start, 2rem clamp(2.25rem, 9.75vw, 2.375rem));
+
+  @include desktop {
+    width: 26.25rem;
+
+    justify-content: start;
+    gap: 3rem 1.75rem;
+  }
+}
+
+.skill-list .skill {
+  width: 2.8125rem;
+
+  @include flex(column, start, center, 0.625rem);
+
+  @include desktop {
+    width: 5.25rem;
+  }
+}
+
+.skill-list img {
+  width: auto;
+  height: 45px;
+
+  @include desktop {
+    height: 60px;
+  }
+}
+
+.skill-list .skill-name {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+
+  color: var(--primary-clr);
+  font-size: 1.125rem;
+  text-align: center;
+  white-space: nowrap;
+
+  @include desktop {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+
+    white-space: normal;
+  }
+}
+
+.learning {
+  width: 100%;
+
+  color: var(--color-white);
+
+  display: grid;
+  grid-template-columns: minmax(auto, 13.375rem) auto;
+  grid-template-areas:
+    'title title'
+    'text list';
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+
+  @include desktop {
+    width: 23.75rem;
+    height: 23.75rem;
+    flex-shrink: 0;
+
+    background: url('/icons/desktop_ellipse_learning_1.svg') center / contain no-repeat;
+
+    @include flex(column, center, center, 1.25rem);
+  }
+}
+
+.learning-title {
+  color: var(--primary-clr);
+
+  grid-area: title;
+  justify-self: center;
+
+  @include desktop {
+    color: var(--color-white);
+    font-size: 1.125rem;
+  }
+}
+
+.title-mobile {
+  @include desktop {
+    display: none;
+  }
+}
+
+.title-desktop {
+  display: none;
+
+  @include desktop {
+    display: inline;
+  }
+}
+
+.learning-list {
+  width: 7.0625rem;
+  height: 6rem;
+  margin-left: 0.5rem;
+  padding: 0.75rem 0 0;
+  border-radius: 50%;
+
+  background-color: color-mix(in srgb, var(--primary-clr) 7%, transparent);
+  list-style: none;
+
+  grid-area: list;
+  flex-wrap: wrap;
+  align-content: center;
+  @include flex(row-reverse, center, start, 1rem);
+
+  @include desktop {
+    width: auto;
+    height: auto;
+    margin-left: 0;
+    padding-top: 0;
+    border-radius: 0;
+
+    background-color: transparent;
+
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+.learning-list .skill {
+  @include flex(column, center, center, 0.375rem);
+}
+
+.learning-list img {
+  width: 32px;
+  height: auto;
+
+  @include desktop {
+    width: 48px;
+  }
+}
+
+.learning-list .skill-name {
+  width: min-content;
+
+  font-size: 0.875rem;
+  text-align: center;
+
+  @include desktop {
+    width: auto;
+  }
+}
+
+.learning-text {
+  grid-area: text;
+
+  @include desktop {
+    width: 19.1875rem;
+
+    font-size: 1.125rem;
+    text-align: center;
+  }
+}
+
+.cta-btn {
+  margin-top: 0.25rem;
+
+  @include desktop {
+    display: none;
+  }
+}

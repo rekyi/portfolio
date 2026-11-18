@@ -9,8 +9,12 @@ export const SKILLS: Skill[] = [
   { name: 'REST-API', icon: { src: '/icons/desktop_api.svg', width: 56, height: 60 } },
   { name: 'Supabase', icon: { src: '/icons/desktop_supabase.svg', width: 59, height: 60 } },
   { name: 'Git', icon: { src: '/icons/desktop_git.svg', width: 60, height: 60 } },
-  { name: 'Material Design' },
-  { name: 'Scrum' },
 ];
 
-export const LEARNING_SKILLS: Skill[] = [{ name: 'React' }, { name: 'Vue.js' }];
+export const LEARNING_SKILLS: Skill[] = [
+  { name: 'Cat', icon: { src: '/images/learning_skill_placeholder_1.gif', width: 64, height: 64 } },
+  {
+    name: 'Another Cat',
+    icon: { src: '/images/learning_skill_placeholder_2.gif', width: 128, height: 128 },
+  },
+];

@@ -20,23 +20,28 @@
     </ul>
 
     <div class="learning">
-      <p class="learning-title">I am currently learning</p>
-      <ul class="learning-list">
-        @for (skill of learningSkills; track skill.name) {
-          <li class="skill">
-            @if (skill.icon; as icon) {
-              <img
-                [src]="icon.src"
-                alt=""
-                [width]="icon.width"
-                [height]="icon.height"
-                loading="lazy"
-              />
-            }
-            <span class="skill-name">{{ skill.name }}</span>
-          </li>
-        }
-      </ul>
+      <p class="learning-title">
+        <span class="title-mobile">What I am currently learning</span>
+        <span class="title-desktop">I am currently learning</span>
+      </p>
+      @if (learningSkills.length > 0) {
+        <ul class="learning-list">
+          @for (skill of learningSkills; track skill.name) {
+            <li class="skill">
+              @if (skill.icon; as icon) {
+                <img
+                  [src]="icon.src"
+                  alt=""
+                  [width]="icon.width"
+                  [height]="icon.height"
+                  loading="lazy"
+                />
+              }
+              <span class="skill-name">{{ skill.name }}</span>
+            </li>
+          }
+        </ul>
+      }
       <p class="learning-text">
         I am motivated to continually improve my skills, implement innovative solutions and stay
         abreast of new technologies.
@@ -44,7 +49,7 @@
     </div>
   </div>
 
-  <a appPrimaryButton variant="secondary" class="cta-btn" routerLink="/" fragment="contact">
+  <a appPrimaryButton class="cta-btn" routerLink="/" fragment="contact">
     Let's talk
   </a>
 </section>
