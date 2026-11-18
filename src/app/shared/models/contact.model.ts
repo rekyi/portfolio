@@ -9,3 +9,5 @@ export interface ContactResponse {
   success: boolean;
   error?: string;
 }
+
+export type SendStatus = 'idle' | 'success' | 'error';

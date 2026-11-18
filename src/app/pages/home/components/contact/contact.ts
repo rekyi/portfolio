@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 import { ContactService } from '../../../../core/services/contact';
 import { PrimaryButton } from '../../../../shared/components/primary-button/primary-button';
 import { SectionTitle } from '../../../../shared/components/section-title/section-title';
-import { ContactRequest } from '../../../../shared/models/contact.model';
+import { ContactRequest, SendStatus } from '../../../../shared/models/contact.model';
 
 @Component({
   imports: [RouterLink, ReactiveFormsModule, PrimaryButton, SectionTitle],
@@ -16,6 +16,7 @@ export class Contact {
   private readonly contactService = inject(ContactService);
 
   protected readonly isSending = signal(false);
+  protected readonly sendStatus = signal<SendStatus>('idle');
 
   protected readonly contactForm = new FormGroup({
     name: new FormControl('', {
@@ -44,9 +45,10 @@ export class Contact {
   protected handleSubmit(): void {
     if (this.contactForm.invalid || this.isSending()) return;
     this.isSending.set(true);
+    this.sendStatus.set('idle');
     this.contactService.send(this.getContactRequest()).subscribe({
       next: () => this.handleSendSuccess(),
-      error: () => this.isSending.set(false),
+      error: () => this.handleSendError(),
     });
   }
 
@@ -61,6 +63,12 @@ export class Contact {
 
   private handleSendSuccess(): void {
     this.isSending.set(false);
+    this.sendStatus.set('success');
     this.contactForm.reset();
+  }
+
+  private handleSendError(): void {
+    this.isSending.set(false);
+    this.sendStatus.set('error');
   }
 }

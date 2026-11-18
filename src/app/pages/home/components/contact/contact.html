@@ -122,6 +122,17 @@
     >
       Send
     </button>
+
+    <p class="send-feedback" [class.is-error]="sendStatus() === 'error'" role="status">
+      @switch (sendStatus()) {
+        @case ('success') {
+          Thank you! Your message has been sent.
+        }
+        @case ('error') {
+          Sorry, your message could not be sent. Please try again later.
+        }
+      }
+    </p>
   </form>
 
   <button class="scroll-top" type="button" aria-label="Scroll to top" (click)="scrollToTop()">
