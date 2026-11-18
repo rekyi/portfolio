@@ -327,6 +327,10 @@ section {
   }
 }
 
+.honeypot {
+  @include visually-hidden;
+}
+
 .privacy {
   position: relative;
 

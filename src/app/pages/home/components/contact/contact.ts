@@ -27,6 +27,7 @@ export class Contact {
       validators: [Validators.required],
       updateOn: 'blur',
     }),
+    website: new FormControl('', { nonNullable: true }),
     privacy: new FormControl(false, {
       nonNullable: true,
       validators: [Validators.requiredTrue],
