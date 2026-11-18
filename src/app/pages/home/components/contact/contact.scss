@@ -86,6 +86,8 @@ section {
 }
 
 .contact-link {
+  --icon: var(--icon-default);
+
   color: inherit;
   font-size: 1.125rem;
   text-decoration: none;
@@ -95,6 +97,14 @@ section {
   gap: 0.75rem;
 
   &:active {
+    --icon: var(--icon-active);
+
+    color: var(--primary-clr);
+  }
+
+  @include hover {
+    --icon: var(--icon-active);
+
     color: var(--primary-clr);
   }
 
@@ -110,8 +120,9 @@ section {
 .contact-link::before {
   width: 20px;
   height: 21px;
+  translate: 0 -2px;
 
-  background: center no-repeat;
+  background: var(--icon) center no-repeat;
   content: '';
 
   flex-shrink: 0;
@@ -122,29 +133,18 @@ section {
   }
 }
 
-.phone-link::before {
-  translate: 0 -2px;
-  background-image: url('/icons/form_phone_1.svg');
+.phone-link {
+  --icon-default: url('/icons/form_phone_1.svg');
+  --icon-active: url('/icons/form_phone_2.svg');
 }
 
-.phone-link:active::before {
-  background-image: url('/icons/form_phone_2.svg');
-}
-
-.email-link::before {
-  translate: 0 -2px;
-  background-image: url('/icons/mobile_form_email_1.svg');
+.email-link {
+  --icon-default: url('/icons/mobile_form_email_1.svg');
+  --icon-active: url('/icons/mobile_form_email_2.svg');
 
   @include desktop {
-    background-image: url('/icons/desktop_form_mail_1.svg');
-  }
-}
-
-.email-link:active::before {
-  background-image: url('/icons/mobile_form_email_2.svg');
-
-  @include desktop {
-    background-image: url('/icons/desktop_form_mail_2.svg');
+    --icon-default: url('/icons/desktop_form_mail_1.svg');
+    --icon-active: url('/icons/desktop_form_mail_2.svg');
   }
 }
 

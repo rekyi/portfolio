@@ -11,8 +11,8 @@ export const SOCIAL_LINKS: SocialLink[] = [
         hover: '/icons/desktop_email_hero_2.svg',
       },
       footer: {
-        default: '/icons/mobile_email_1.svg',
-        hover: '/icons/mobile_email_2.svg',
+        default: '/icons/mobile_footer_mail_2.svg',
+        hover: '/icons/mobile_footer_mail_1.svg',
       },
     },
   },
@@ -26,8 +26,8 @@ export const SOCIAL_LINKS: SocialLink[] = [
         hover: '/icons/desktop_github_hero_2.svg',
       },
       footer: {
-        default: '/icons/mobile_github_1.svg',
-        hover: '/icons/mobile_github_2.svg',
+        default: '/icons/mobile_footer_github_2.svg',
+        hover: '/icons/mobile_footer_github_1.svg',
       },
     },
   },

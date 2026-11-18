@@ -8,7 +8,13 @@
         [attr.rel]="link.isExternal ? 'noopener noreferrer' : null"
         [attr.aria-label]="link.label"
       >
-        <img [src]="link.icons[variant()].default" alt="" width="30" height="30" />
+        <img
+          class="icon-default"
+          [src]="link.icons[variant()].default"
+          alt=""
+          width="30"
+          height="30"
+        />
         <img class="icon-hover" [src]="link.icons[variant()].hover" alt="" width="30" height="30" />
       </a>
     </li>

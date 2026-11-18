@@ -14,6 +14,11 @@
 
 .links.horizontal {
   flex-direction: row;
+  gap: 1.5rem;
+
+  @include desktop {
+    gap: 1rem;
+  }
 }
 
 .link {
@@ -22,6 +27,10 @@
   display: grid;
 
   @include hover {
+    .icon-default {
+      opacity: 0;
+    }
+
     .icon-hover {
       opacity: 1;
     }
@@ -41,4 +50,20 @@
 
 .link .icon-hover {
   opacity: 0;
+}
+
+.horizontal .icon-default {
+  opacity: 0;
+
+  @include desktop {
+    opacity: 1;
+  }
+}
+
+.horizontal .icon-hover {
+  opacity: 1;
+
+  @include desktop {
+    opacity: 0;
+  }
 }
