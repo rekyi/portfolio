@@ -3,7 +3,7 @@ import { SocialLink } from './social-link.model';
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'Email',
-    url: 'mailto:blub@example.com',
+    url: 'mailto:mail@rekyi.de',
     isExternal: false,
     icons: {
       hero: {
