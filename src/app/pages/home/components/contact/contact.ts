@@ -9,4 +9,8 @@ import { SectionTitle } from '../../../../shared/components/section-title/sectio
   styleUrl: './contact.scss',
   templateUrl: './contact.html',
 })
-export class Contact {}
+export class Contact {
+  protected scrollToTop(): void {
+    window.scrollTo({ top: 0 });
+  }
+}
