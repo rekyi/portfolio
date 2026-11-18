@@ -12,7 +12,7 @@ header('Content-Type: application/json; charset=utf-8');
 
 match ($_SERVER['REQUEST_METHOD']) {
     'OPTIONS' => respond(204),
-    'POST' => handlePost($config['recipient']),
+    'POST' => handlePost($config['sender'], $config['recipient']),
     default => respond(405, ['success' => false, 'error' => 'Method not allowed']),
 };
 
@@ -30,7 +30,7 @@ function sendCorsHeaders(array $allowedOrigins): void
     header('Vary: Origin');
 }
 
-function handlePost(string $recipient): void
+function handlePost(string $sender, string $recipient): void
 {
     $params = json_decode((string) file_get_contents('php://input'));
 
@@ -52,7 +52,7 @@ function handlePost(string $recipient): void
         respond(400, ['success' => false, 'error' => 'Invalid input data']);
     }
 
-    if (!sendMail($recipient, $contact)) {
+    if (!sendMail($sender, $recipient, $contact)) {
         respond(500, ['success' => false, 'error' => 'Mail delivery failed']);
     }
 
@@ -75,12 +75,12 @@ function isValid(array $contact): bool
         && mb_strlen($contact['message']) <= MAX_MESSAGE_LENGTH;
 }
 
-function sendMail(string $recipient, array $contact): bool
+function sendMail(string $sender, string $recipient, array $contact): bool
 {
     $headers = [
         'MIME-Version: 1.0',
         'Content-Type: text/html; charset=utf-8',
-        "From: Portfolio Contact <$recipient>",
+        "From: Portfolio Contact <$sender>",
         "Reply-To: {$contact['email']}",
     ];
 
@@ -89,7 +89,7 @@ function sendMail(string $recipient, array $contact): bool
         'New message from your portfolio',
         buildMailBody($contact),
         implode("\r\n", $headers),
-        "-f $recipient",
+        "-f $sender",
     );
 }
 
