@@ -4,8 +4,19 @@
     <div class="technologies">
       <span class="technologies-label">Technologies:</span>
       <ul class="technology-list">
-        @for (technology of project().technologies; track technology) {
-          <li class="technology">{{ technology }}</li>
+        @for (technology of project().technologies; track technology.name) {
+          <li class="technology">
+            @if (technology.icon; as icon) {
+              <img
+                [src]="icon.src"
+                alt=""
+                [width]="icon.width"
+                [height]="icon.height"
+                loading="lazy"
+              />
+            }
+            <span class="technology-name">{{ technology.name }}</span>
+          </li>
         }
       </ul>
     </div>
@@ -55,7 +66,13 @@
 
   <div class="links">
     @if (project().liveUrl; as liveUrl) {
-      <a appPrimaryButton [href]="liveUrl" target="_blank" rel="noopener noreferrer">
+      <a
+        appPrimaryButton
+        class="card-btn"
+        [href]="liveUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Live Test
       </a>
     }
@@ -63,6 +80,7 @@
       <a
         appPrimaryButton
         variant="secondary"
+        class="card-btn"
         [href]="githubUrl"
         target="_blank"
         rel="noopener noreferrer"
@@ -71,7 +89,9 @@
       </a>
     }
     @if (!project().liveUrl && !project().githubUrl) {
-      <button appPrimaryButton variant="secondary" type="button" disabled>Coming soon</button>
+      <button appPrimaryButton variant="secondary" class="card-btn" type="button" disabled>
+        Coming soon
+      </button>
     }
   </div>
 </article>

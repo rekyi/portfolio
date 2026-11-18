@@ -1,3 +1,5 @@
+import { Skill } from './skill.model';
+
 export interface ProjectImage {
   src: string;
   width: number;
@@ -7,7 +9,7 @@ export interface ProjectImage {
 export interface Project {
   title: string;
   duration?: string;
-  technologies: string[];
+  technologies: Skill[];
   about: string;
   workProcess?: string;
   groupWork?: string;
@@ -15,4 +17,5 @@ export interface Project {
   image?: ProjectImage;
   liveUrl?: string;
   githubUrl?: string;
+  isOngoing?: boolean;
 }

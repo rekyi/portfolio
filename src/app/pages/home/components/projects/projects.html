@@ -18,7 +18,19 @@
     }
   </div>
 
-  <div role="tabpanel">
-    <app-project-card [project]="activeProject()" />
+  <div
+    class="tab-panel"
+    role="tabpanel"
+    [class.is-first-active]="activeIndex() === 0"
+    [class.is-last-active]="activeIndex() === projects.length - 1"
+  >
+    @for (project of projects; track project.title) {
+      <app-project-card
+        class="card"
+        [project]="project"
+        [class.is-active]="$index === activeIndex()"
+        [class.is-removed]="isCardRemoved($index)"
+      />
+    }
   </div>
 </section>

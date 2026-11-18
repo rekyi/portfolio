@@ -1,0 +1,110 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.project-card {
+  height: 100%;
+  padding: 1.5rem 1.4375rem 2.3125rem;
+
+  @include flex(column, start, stretch, 1.4375rem);
+}
+
+.meta {
+  font-size: 0.875rem;
+
+  @include flex(column, start, start, 0.3125rem);
+}
+
+.title {
+  margin-bottom: 0.4375rem;
+
+  color: var(--primary-clr);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.technologies {
+  flex-wrap: wrap;
+  @include flex(row, start, center, 0.25rem);
+}
+
+.technology-list {
+  padding: 0;
+
+  list-style: none;
+
+  flex-wrap: wrap;
+  @include flex(row, start, center, 0.25rem);
+}
+
+.technology:not(:last-child)::after {
+  content: ',';
+}
+
+.technology img {
+  display: none;
+}
+
+.preview {
+  @include flex(row, center, center);
+}
+
+.preview img,
+.coming-soon {
+  width: min(100%, 16.8125rem);
+  height: auto;
+  aspect-ratio: 269 / 167;
+  border-radius: 1.875rem;
+
+  object-fit: cover;
+}
+
+.coming-soon {
+  background-color: var(--secondary-clr);
+  color: var(--primary-clr);
+
+  @include flex(row, center, center);
+}
+
+.details {
+  flex-grow: 1;
+  @include flex(column, start, stretch, 1.75rem);
+}
+
+.detail {
+  @include flex(column, start, stretch, 0.8125rem);
+}
+
+.detail-title {
+  color: var(--primary-clr);
+  font-size: 1.125rem;
+  font-weight: 400;
+
+  @include flex(row, start, center, 0.5rem);
+
+  &::before {
+    content: '';
+    width: 29px;
+    height: 26px;
+    translate: 0 -0.125em;
+    flex-shrink: 0;
+
+    background: url('/icons/ellipse_card.svg') center / contain no-repeat;
+  }
+}
+
+.links {
+  margin-top: 1.25rem;
+
+  flex-wrap: wrap;
+  @include flex(row, center, center, 1rem);
+}
+
+.card-btn {
+  padding: 0.75rem 1.875rem;
+
+  font-size: 0.875rem;
+  line-height: 1.2;
+}

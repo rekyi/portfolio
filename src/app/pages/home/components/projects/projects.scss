@@ -1,0 +1,78 @@
+@use 'mixins' as *;
+
+section {
+  padding-top: 5rem;
+  padding-inline: 0;
+
+  line-height: 1.2;
+}
+
+.tabs {
+  margin-top: 2.25rem;
+
+  display: flex;
+}
+
+.tab {
+  padding: 0.5625rem 0 0.4375rem;
+  border: none;
+  border-radius: 1.25rem 1.25rem 0 0;
+
+  background-color: transparent;
+  color: var(--secondary-clr);
+  font-size: clamp(0.875rem, 4.6vw, 1.125rem);
+
+  flex: 1;
+  cursor: pointer;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
+
+  &.is-active {
+    background-color: var(--color-card);
+    color: var(--primary-clr);
+  }
+
+  @include hover {
+    color: var(--primary-clr);
+  }
+
+  @include focus-ring;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.tab-desktop {
+  display: none;
+}
+
+.tab-panel {
+  border-radius: 1.875rem;
+
+  background-color: var(--color-card);
+
+  display: grid;
+
+  &.is-first-active {
+    border-top-left-radius: 0;
+  }
+
+  &.is-last-active {
+    border-top-right-radius: 0;
+  }
+}
+
+.card {
+  grid-area: 1 / 1;
+  visibility: hidden;
+
+  &.is-active {
+    visibility: visible;
+  }
+
+  &.is-removed {
+    display: none;
+  }
+}
