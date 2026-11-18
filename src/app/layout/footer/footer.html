@@ -1,2 +1,20 @@
-<p>footer works!</p>
-<app-social-links />
+<footer>
+  <div class="content">
+    <a class="logo" routerLink="/" aria-label="Home">
+      <img src="/icons/logo_placeholder.gif" alt="" width="57" height="72" loading="lazy" />
+    </a>
+
+    <app-social-links variant="footer" />
+
+    <div class="legal">
+      <nav aria-label="Legal">
+        <ul class="legal-links">
+          <li><a routerLink="/legal-notice">Legal notice</a></li>
+          <li><a routerLink="/privacy-policy">Privacy policy</a></li>
+        </ul>
+      </nav>
+
+      <p class="copyright">&copy; Blub {{ currentYear }}</p>
+    </div>
+  </div>
+</footer>
