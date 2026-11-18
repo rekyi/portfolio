@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { ContactService } from '../../../../core/services/contact';
 import { PrimaryButton } from '../../../../shared/components/primary-button/primary-button';
 import { SectionTitle } from '../../../../shared/components/section-title/section-title';
+import { ContactRequest } from '../../../../shared/models/contact.model';
 
 @Component({
   imports: [RouterLink, ReactiveFormsModule, PrimaryButton, SectionTitle],
@@ -11,6 +13,10 @@ import { SectionTitle } from '../../../../shared/components/section-title/sectio
   templateUrl: './contact.html',
 })
 export class Contact {
+  private readonly contactService = inject(ContactService);
+
+  protected readonly isSending = signal(false);
+
   protected readonly contactForm = new FormGroup({
     name: new FormControl('', {
       nonNullable: true,
@@ -36,10 +42,25 @@ export class Contact {
   });
 
   protected handleSubmit(): void {
-    if (this.contactForm.invalid) return;
+    if (this.contactForm.invalid || this.isSending()) return;
+    this.isSending.set(true);
+    this.contactService.send(this.getContactRequest()).subscribe({
+      next: () => this.handleSendSuccess(),
+      error: () => this.isSending.set(false),
+    });
   }
 
   protected scrollToTop(): void {
     window.scrollTo({ top: 0 });
+  }
+
+  private getContactRequest(): ContactRequest {
+    const { name, email, message, website } = this.contactForm.getRawValue();
+    return { name, email, message, website };
+  }
+
+  private handleSendSuccess(): void {
+    this.isSending.set(false);
+    this.contactForm.reset();
   }
 }
