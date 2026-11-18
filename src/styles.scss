@@ -5,7 +5,7 @@
 .content {
   max-width: 90rem;
   margin-inline: auto;
-  padding-inline: clamp(1rem, 5vw, 4.5rem);
+  padding-inline: var(--element-content-padding);
 }
 
 body {

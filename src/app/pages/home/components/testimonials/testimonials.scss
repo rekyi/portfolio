@@ -1,0 +1,76 @@
+@use 'mixins' as *;
+
+section {
+  padding-top: 5rem;
+
+  line-height: 1.2;
+}
+
+.title {
+  color: var(--primary-clr);
+  font-family: var(--font-headline);
+  font-size: clamp(1.75rem, 9vw, 2rem);
+  font-weight: 400;
+
+  @include desktop {
+    font-family: var(--font-primary);
+    text-align: center;
+  }
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+
+  color: var(--secondary-clr);
+  font-family: var(--font-primary);
+  font-size: 1.125rem;
+
+  display: block;
+
+  @include desktop {
+    margin-top: 0;
+
+    color: inherit;
+    font-size: inherit;
+
+    display: inline;
+  }
+}
+
+.cards {
+  margin-top: 3rem;
+  margin-inline: calc(var(--element-content-padding) * -1);
+  padding-inline: var(--element-content-padding);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-padding-inline: var(--element-content-padding);
+
+  scrollbar-width: none;
+
+  display: flex;
+  gap: 1.25rem;
+  scroll-snap-type: x mandatory;
+
+  @include desktop {
+    margin-top: 3.75rem;
+    margin-inline: 0;
+    padding-inline: 0;
+    overflow-x: visible;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+.card {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+
+  @include desktop {
+    max-width: 25rem;
+
+    flex: 1 1 22rem;
+    container-type: inline-size;
+  }
+}

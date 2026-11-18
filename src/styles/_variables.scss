@@ -10,4 +10,5 @@
   --color-card: color-mix(in srgb, var(--primary-clr) 7%, transparent);
   --element-nav-height: 6.5rem;
   --element-nav-height-mobile: 6rem;
+  --element-content-padding: clamp(1rem, 5vw, 4.5rem);
 }

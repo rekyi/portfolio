@@ -1,0 +1,83 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.testimonial-card {
+  width: 18.3125rem;
+  aspect-ratio: 293 / 289;
+  padding: 2.0625rem 1.5rem 3.25rem 3.125rem;
+
+  background: url('/icons/mobile_ellipse_references.svg') center / 100% 100% no-repeat;
+  line-height: 1.2;
+
+  @include flex(column, flex-start, flex-start);
+
+  @include desktop {
+    width: 100%;
+    aspect-ratio: 1;
+    padding: 21.5cqi 13.5cqi 20cqi;
+
+    background-image: url('/icons/desktop_ellipse_testimonials_1.svg');
+    text-align: center;
+
+    align-items: center;
+
+    @include hover {
+      background-image: url('/icons/desktop_ellipse_testimonials_2.svg');
+    }
+  }
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  @include desktop {
+    font-size: clamp(1.5rem, 6.5cqi, 1.625rem);
+  }
+}
+
+.project {
+  margin-top: 0.5rem;
+
+  font-size: 1.125rem;
+
+  @include desktop {
+    margin-top: 0.25rem;
+  }
+}
+
+.project-name {
+  color: var(--primary-clr);
+  font-weight: 500;
+}
+
+.quote {
+  margin-block: 1rem;
+
+  @include desktop {
+    margin-block: 1.25rem 1rem;
+
+    font-size: clamp(1rem, 4.5cqi, 1.125rem);
+  }
+}
+
+.linkedin-link {
+  margin-top: auto;
+
+  color: var(--primary-clr);
+
+  transition: color 200ms ease;
+
+  @include hover {
+    color: var(--secondary-clr);
+  }
+
+  @include focus-ring;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
