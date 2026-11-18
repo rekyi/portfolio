@@ -9,7 +9,7 @@ const PLACEHOLDER_TECHNOLOGIES: Skill[] = [
 
 export const PROJECTS: Project[] = [
   {
-    title: 'DA Bubble',
+    title: 'Blub',
     duration: '3 weeks',
     technologies: PLACEHOLDER_TECHNOLOGIES,
     about:
@@ -23,7 +23,7 @@ export const PROJECTS: Project[] = [
     githubUrl: 'blub',
   },
   {
-    title: 'Sharkie',
+    title: 'Blub',
     duration: '5 weeks',
     technologies: PLACEHOLDER_TECHNOLOGIES,
     about:
@@ -37,7 +37,7 @@ export const PROJECTS: Project[] = [
     githubUrl: 'blub',
   },
   {
-    title: 'Join',
+    title: 'Blub',
     duration: '2 months',
     technologies: PLACEHOLDER_TECHNOLOGIES,
     about:
@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
     githubUrl: 'blub',
   },
   {
-    title: 'Ongoing Project',
+    title: 'Ongoing Blub',
     technologies: PLACEHOLDER_TECHNOLOGIES,
     isOngoing: true,
     about:

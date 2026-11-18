@@ -2,7 +2,7 @@
   <div class="meta">
     <h3 class="title">{{ project().title }}</h3>
     <div class="technologies">
-      <span class="technologies-label">Technologies:</span>
+      <span class="technologies-label">Technologies</span>
       <ul class="technology-list">
         @for (technology of project().technologies; track technology.name) {
           <li class="technology">
@@ -41,7 +41,12 @@
 
   <div class="details">
     <div class="detail">
-      <h4 class="detail-title">About the project</h4>
+      <div class="detail-head">
+        <h4 class="detail-title">About the project</h4>
+        @if (project().duration; as duration) {
+          <p class="about-duration">Duration: {{ duration }}</p>
+        }
+      </div>
       <p class="detail-text">{{ project().about }}</p>
     </div>
     @if (project().workProcess; as workProcess) {

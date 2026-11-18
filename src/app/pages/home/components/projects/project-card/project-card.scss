@@ -9,12 +9,28 @@
   padding: 1.5rem 1.4375rem 2.3125rem;
 
   @include flex(column, start, stretch, 1.4375rem);
+
+  @include desktop {
+    padding: 2.25rem var(--element-project-padding) 1.75rem;
+
+    display: grid;
+    grid-template-columns: minmax(0, 691fr) minmax(0, 453fr);
+    grid-template-rows: auto auto auto 1fr;
+    gap: 0.9375rem 3.25rem;
+  }
 }
 
 .meta {
   font-size: 0.875rem;
 
   @include flex(column, start, start, 0.3125rem);
+
+  @include desktop {
+    font-size: 1.125rem;
+
+    grid-area: 1 / 2;
+    align-items: center;
+  }
 }
 
 .title {
@@ -23,11 +39,28 @@
   color: var(--primary-clr);
   font-size: 1.5rem;
   font-weight: 400;
+
+  @include desktop {
+    @include visually-hidden;
+  }
 }
 
 .technologies {
   flex-wrap: wrap;
   @include flex(row, start, center, 0.25rem);
+
+  @include desktop {
+    flex-direction: column;
+    gap: 0.5625rem;
+  }
+}
+
+.technologies-label::after {
+  content: ':';
+
+  @include desktop {
+    content: none;
+  }
 }
 
 .technology-list {
@@ -37,18 +70,50 @@
 
   flex-wrap: wrap;
   @include flex(row, start, center, 0.25rem);
+
+  @include desktop {
+    justify-content: center;
+    gap: 1.875rem;
+  }
 }
 
 .technology:not(:last-child)::after {
   content: ',';
+
+  @include desktop {
+    content: none;
+  }
 }
 
 .technology img {
   display: none;
+
+  @include desktop {
+    width: auto;
+    height: 36px;
+
+    display: block;
+  }
+}
+
+.technology-name {
+  @include desktop {
+    @include visually-hidden;
+  }
+}
+
+.duration {
+  @include desktop {
+    display: none;
+  }
 }
 
 .preview {
   @include flex(row, center, center);
+
+  @include desktop {
+    grid-area: 2 / 2;
+  }
 }
 
 .preview img,
@@ -59,6 +124,11 @@
   border-radius: 1.875rem;
 
   object-fit: cover;
+
+  @include desktop {
+    width: 100%;
+    aspect-ratio: 453 / 312;
+  }
 }
 
 .coming-soon {
@@ -71,10 +141,27 @@
 .details {
   flex-grow: 1;
   @include flex(column, start, stretch, 1.75rem);
+
+  @include desktop {
+    grid-row: 1 / -1;
+    grid-column: 1;
+    gap: 2.25rem;
+  }
 }
 
 .detail {
   @include flex(column, start, stretch, 0.8125rem);
+
+  @include desktop {
+    gap: 0.625rem;
+  }
+}
+
+.detail-head {
+  @include desktop {
+    flex-wrap: wrap;
+    @include flex(row, start, center, 0.5rem 1.875rem);
+  }
 }
 
 .detail-title {
@@ -93,6 +180,31 @@
 
     background: url('/icons/ellipse_card.svg') center / contain no-repeat;
   }
+
+  @include desktop {
+    color: var(--secondary-clr);
+    font-size: 1.75rem;
+
+    gap: 1.3125rem;
+  }
+}
+
+.about-duration {
+  display: none;
+
+  @include desktop {
+    font-size: 1.125rem;
+
+    display: block;
+  }
+}
+
+.detail-text {
+  @include desktop {
+    padding-left: 3.125rem;
+
+    font-size: 1.125rem;
+  }
 }
 
 .links {
@@ -100,6 +212,13 @@
 
   flex-wrap: wrap;
   @include flex(row, center, center, 1rem);
+
+  @include desktop {
+    margin-top: 1.125rem;
+
+    grid-area: 3 / 2;
+    gap: 2.5rem;
+  }
 }
 
 .card-btn {
@@ -107,4 +226,10 @@
 
   font-size: 0.875rem;
   line-height: 1.2;
+
+  @include desktop {
+    padding: 0.6875rem 1.8125rem;
+
+    font-size: 1.125rem;
+  }
 }
