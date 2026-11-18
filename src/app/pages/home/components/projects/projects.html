@@ -2,7 +2,7 @@
   <app-section-title>My Projects</app-section-title>
 
   <div class="tabs" role="tablist">
-    @for (project of projects; track project.title) {
+    @for (project of projects; track $index) {
       <button
         type="button"
         role="tab"
@@ -24,7 +24,7 @@
     [class.is-first-active]="activeIndex() === 0"
     [class.is-last-active]="activeIndex() === projects.length - 1"
   >
-    @for (project of projects; track project.title) {
+    @for (project of projects; track $index) {
       <app-project-card
         class="card"
         [project]="project"
