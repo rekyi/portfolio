@@ -1,7 +1,7 @@
 @use 'mixins' as *;
 
 @mixin tall-screen {
-  @include desktop {
+  @include widescreen {
     @media (min-height: 56.25rem) {
       @content;
     }
@@ -148,8 +148,6 @@ section {
 
   @include desktop {
     position: relative;
-
-    justify-self: center;
   }
 }
 
@@ -229,7 +227,7 @@ h1 {
   @include desktop {
     position: absolute;
     top: -3.3125rem;
-    right: -0.5rem;
+    right: 0.375rem;
 
     display: block;
   }
