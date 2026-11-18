@@ -1,1 +1,17 @@
-<p>testimonial-card works!</p>
+<article class="testimonial-card">
+  <h3 class="name">{{ testimonial().name }}</h3>
+  <p class="project">
+    Project <span class="project-name">{{ testimonial().project }}</span>
+  </p>
+  <p class="quote">
+    <q>{{ testimonial().quote }}</q>
+  </p>
+  <a
+    class="linkedin-link"
+    [href]="testimonial().linkedinUrl"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    LinkedIn Profile
+  </a>
+</article>
