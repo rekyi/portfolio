@@ -101,7 +101,15 @@
       </p>
     </div>
 
-    <button appPrimaryButton variant="secondary" type="submit" class="send-btn">Send</button>
+    <button
+      appPrimaryButton
+      variant="secondary"
+      type="submit"
+      class="send-btn"
+      [disabled]="contactForm.invalid"
+    >
+      Send
+    </button>
   </form>
 
   <button class="scroll-top" type="button" aria-label="Scroll to top" (click)="scrollToTop()">
