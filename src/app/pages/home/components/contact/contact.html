@@ -35,7 +35,11 @@
         placeholder="Your name"
         aria-describedby="contact-name-error"
       />
-      <p id="contact-name-error" class="error-message"></p>
+      <p id="contact-name-error" class="error-message">
+        @if (contactForm.controls.name.touched && contactForm.controls.name.invalid) {
+          Please enter your name.
+        }
+      </p>
     </div>
 
     <div class="field">
@@ -49,7 +53,15 @@
         placeholder="Your Email"
         aria-describedby="contact-email-error"
       />
-      <p id="contact-email-error" class="error-message"></p>
+      <p id="contact-email-error" class="error-message">
+        @if (contactForm.controls.email.touched && contactForm.controls.email.invalid) {
+          @if (contactForm.controls.email.hasError('required')) {
+            Please enter your email.
+          } @else {
+            Please enter a valid email address.
+          }
+        }
+      </p>
     </div>
 
     <div class="field message">
@@ -62,7 +74,11 @@
         placeholder="Your message"
         aria-describedby="contact-message-error"
       ></textarea>
-      <p id="contact-message-error" class="error-message"></p>
+      <p id="contact-message-error" class="error-message">
+        @if (contactForm.controls.message.touched && contactForm.controls.message.invalid) {
+          Please enter a message.
+        }
+      </p>
     </div>
 
     <div class="privacy">
@@ -78,7 +94,11 @@
         I've read the <a routerLink="/privacy-policy">privacy policy</a> and agree to the
         processing of my data as outlined.
       </label>
-      <p id="contact-privacy-error" class="error-message"></p>
+      <p id="contact-privacy-error" class="error-message">
+        @if (contactForm.controls.privacy.dirty && contactForm.controls.privacy.invalid) {
+          Please accept the privacy policy.
+        }
+      </p>
     </div>
 
     <button appPrimaryButton variant="secondary" type="submit" class="send-btn">Send</button>

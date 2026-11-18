@@ -239,6 +239,10 @@ section {
     }
   }
 
+  &.ng-touched.ng-invalid::placeholder {
+    color: transparent;
+  }
+
   &:focus {
     background-color: color-mix(in srgb, var(--primary-clr) 12%, transparent);
   }
@@ -289,17 +293,37 @@ section {
 
 .error-message {
   position: absolute;
-  top: 100%;
-  left: 1.625rem;
-  margin-top: 0.25rem;
 
   color: var(--error-clr);
   font-size: 0.875rem;
 
+  pointer-events: none;
+}
+
+.field .error-message {
+  bottom: 0;
+  left: 1.625rem;
+
+  line-height: 3.75rem;
+
   @include desktop {
-    top: 0;
     left: 1.6875rem;
-    margin-top: 0;
+
+    line-height: 3.625rem;
+  }
+}
+
+.message .error-message {
+  left: 1.875rem;
+  height: 12.5rem;
+  padding-top: 1.75rem;
+
+  line-height: inherit;
+
+  @include desktop {
+    left: 1.6875rem;
+    height: 9.0625rem;
+    padding-top: 1.375rem;
   }
 }
 
@@ -331,6 +355,10 @@ section {
 
   &:checked {
     background-image: url('/icons/form_ellipse_privacy_3.svg');
+  }
+
+  &.ng-dirty.ng-invalid {
+    background-image: url('/icons/form_ellipse_privacy_4.svg');
   }
 
   @include focus-ring;
