@@ -1,1 +1,31 @@
-<p>about works!</p>
+<section id="about" class="content">
+  <app-section-title>Why me</app-section-title>
+
+  <div class="about-body">
+    <div class="statement">
+      <div class="icon" [class]="activeStatement().id" [class.is-visible]="isIconVisible()">
+        <img
+          [src]="activeStatement().icon"
+          alt=""
+          [width]="activeStatement().iconWidth"
+          [height]="activeStatement().iconHeight"
+          loading="lazy"
+        />
+      </div>
+      <p>
+        <span class="highlight">I am</span><span class="typed">{{ typedText() }}</span>
+      </p>
+    </div>
+
+    <div class="text">
+      <p>Why are you passionate about coding?</p>
+      <p>
+        You can include some key traits like: analytical thinking, creativity, persistence and
+        collaboration. A problem-solving mindset is always nice to have.
+      </p>
+      <a appPrimaryButton variant="secondary" class="cta-btn" routerLink="/" fragment="contact">
+        Let's talk
+      </a>
+    </div>
+  </div>
+</section>

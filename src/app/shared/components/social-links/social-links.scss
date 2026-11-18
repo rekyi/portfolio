@@ -10,10 +10,10 @@
   list-style: none;
 
   @include flex(column, center, center, 0.75rem);
+}
 
-  &.horizontal {
-    flex-direction: row;
-  }
+.links.horizontal {
+  flex-direction: row;
 }
 
 .link {
@@ -28,18 +28,17 @@
   }
 
   @include focus-ring;
+}
 
-  img {
-    grid-area: 1 / 1;
+.link img {
+  grid-area: 1 / 1;
+  transition: opacity 200ms ease;
 
-    transition: opacity 200ms ease;
-
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
-    }
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
   }
+}
 
-  .icon-hover {
-    opacity: 0;
-  }
+.link .icon-hover {
+  opacity: 0;
 }

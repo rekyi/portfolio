@@ -1,8 +1,7 @@
 @use 'mixins' as *;
 
 :host {
-  padding-block: 0.75rem;
-  padding-inline: 1.5rem;
+  padding: 0.75rem 1.5rem;
   border: 1px solid var(--primary-clr);
   border-radius: 2rem;
 
@@ -24,6 +23,7 @@
 
   @include hover {
     border-color: var(--secondary-clr);
+
     background-color: var(--secondary-clr);
   }
 
@@ -31,6 +31,17 @@
 
   @media (prefers-reduced-motion: reduce) {
     transition: none;
+  }
+}
+
+:host(.secondary) {
+  background-color: transparent;
+  color: var(--primary-clr);
+
+  @include hover {
+    border-color: var(--primary-clr);
+
+    background-color: color-mix(in srgb, var(--primary-clr) 20%, transparent);
   }
 }
 
