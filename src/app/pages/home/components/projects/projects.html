@@ -1,3 +1,24 @@
-<p>projects works!</p>
-<app-section-title />
-<app-project-card />
+<section id="projects" class="content">
+  <app-section-title>My Projects</app-section-title>
+
+  <div class="tabs" role="tablist">
+    @for (project of projects; track project.title) {
+      <button
+        type="button"
+        role="tab"
+        class="tab"
+        [class.is-active]="$index === activeIndex()"
+        [attr.aria-selected]="$index === activeIndex()"
+        (click)="activeIndex.set($index)"
+      >
+        {{ $index + 1 }}.
+        <span class="tab-mobile">Project</span>
+        <span class="tab-desktop">{{ project.title }}</span>
+      </button>
+    }
+  </div>
+
+  <div role="tabpanel">
+    <app-project-card />
+  </div>
+</section>
