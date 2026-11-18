@@ -1,2 +1,77 @@
-<p>project-card works!</p>
-<a appPrimaryButton target="_blank" rel="noopener noreferrer">Live Test</a>
+<article class="project-card">
+  <div class="meta">
+    <h3 class="title">{{ project().title }}</h3>
+    <div class="technologies">
+      <span class="technologies-label">Technologies:</span>
+      <ul class="technology-list">
+        @for (technology of project().technologies; track technology) {
+          <li class="technology">{{ technology }}</li>
+        }
+      </ul>
+    </div>
+    @if (project().duration; as duration) {
+      <p class="duration">Duration: {{ duration }}</p>
+    }
+  </div>
+
+  <div class="preview">
+    @if (project().image; as image) {
+      <img
+        [src]="image.src"
+        alt="Preview of {{ project().title }}"
+        [width]="image.width"
+        [height]="image.height"
+        loading="lazy"
+      />
+    } @else {
+      <p class="coming-soon">Coming soon...</p>
+    }
+  </div>
+
+  <div class="details">
+    <div class="detail">
+      <h4 class="detail-title">About the project</h4>
+      <p class="detail-text">{{ project().about }}</p>
+    </div>
+    @if (project().workProcess; as workProcess) {
+      <div class="detail">
+        <h4 class="detail-title">How I have organised my work</h4>
+        <p class="detail-text">{{ workProcess }}</p>
+      </div>
+    }
+    @if (project().groupWork; as groupWork) {
+      <div class="detail">
+        <h4 class="detail-title">My group work experience</h4>
+        <p class="detail-text">{{ groupWork }}</p>
+      </div>
+    }
+    @if (project().learnings; as learnings) {
+      <div class="detail">
+        <h4 class="detail-title">What I have learnt</h4>
+        <p class="detail-text">{{ learnings }}</p>
+      </div>
+    }
+  </div>
+
+  <div class="links">
+    @if (project().liveUrl; as liveUrl) {
+      <a appPrimaryButton [href]="liveUrl" target="_blank" rel="noopener noreferrer">
+        Live Test
+      </a>
+    }
+    @if (project().githubUrl; as githubUrl) {
+      <a
+        appPrimaryButton
+        variant="secondary"
+        [href]="githubUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+    }
+    @if (!project().liveUrl && !project().githubUrl) {
+      <button appPrimaryButton variant="secondary" type="button" disabled>Coming soon</button>
+    }
+  </div>
+</article>
