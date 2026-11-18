@@ -1,3 +1,50 @@
-<p>skills works!</p>
-<app-section-title />
-<a appPrimaryButton routerLink="/" fragment="contact">Let's talk</a>
+<section id="skills" class="content">
+  <app-section-title>My Skills</app-section-title>
+
+  <div class="skills-body">
+    <ul class="skill-list">
+      @for (skill of skills; track skill.name) {
+        <li class="skill">
+          @if (skill.icon; as icon) {
+            <img
+              [src]="icon.src"
+              alt=""
+              [width]="icon.width"
+              [height]="icon.height"
+              loading="lazy"
+            />
+          }
+          <span class="skill-name">{{ skill.name }}</span>
+        </li>
+      }
+    </ul>
+
+    <div class="learning">
+      <p class="learning-title">I am currently learning</p>
+      <ul class="learning-list">
+        @for (skill of learningSkills; track skill.name) {
+          <li class="skill">
+            @if (skill.icon; as icon) {
+              <img
+                [src]="icon.src"
+                alt=""
+                [width]="icon.width"
+                [height]="icon.height"
+                loading="lazy"
+              />
+            }
+            <span class="skill-name">{{ skill.name }}</span>
+          </li>
+        }
+      </ul>
+      <p class="learning-text">
+        I am motivated to continually improve my skills, implement innovative solutions and stay
+        abreast of new technologies.
+      </p>
+    </div>
+  </div>
+
+  <a appPrimaryButton variant="secondary" class="cta-btn" routerLink="/" fragment="contact">
+    Let's talk
+  </a>
+</section>
