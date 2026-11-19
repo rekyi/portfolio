@@ -59,7 +59,9 @@
     font-weight: 700;
   }
 
-  section section {
+  p + section,
+  address + section,
+  section + section {
     margin-top: 1.5rem;
   }
 
