@@ -44,3 +44,6 @@ Thumbs.db
 
 # Mail configuration
 /public/mail-config.php
+
+# Maintenance switch (only created on the server)
+/public/maintenance.on

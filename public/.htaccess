@@ -1,0 +1,26 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Maintenance mode: active while the file maintenance.on exists in public_html
+  RewriteCond %{DOCUMENT_ROOT}/maintenance.on -f
+  RewriteCond %{HTTP_HOST} ^(www\.)?rekyi\.de$ [NC]
+  RewriteCond %{REQUEST_URI} !^/maintenance\.html$
+  RewriteRule ^ - [R=503,L]
+
+  # Only the main domain is the Angular app, subdomain projects stay untouched
+  RewriteCond %{HTTP_HOST} !^(www\.)?rekyi\.de$ [NC]
+  RewriteRule ^ - [L]
+
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+ErrorDocument 503 /maintenance.html
+
+<IfModule mod_headers.c>
+  Header always set Retry-After "86400" "expr=%{REQUEST_STATUS} == 503"
+</IfModule>

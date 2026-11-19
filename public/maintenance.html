@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Soon</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      :root {
+        --background: #262e34;
+        --primary: #89bcd9;
+        --secondary: #f8f5ec;
+        --offset: 12vh;
+      }
+
+      body {
+        min-height: 100dvh;
+        display: grid;
+        place-items: center;
+        overflow-x: hidden;
+        background: var(--background);
+        color: var(--secondary);
+        font-family:
+          system-ui,
+          -apple-system,
+          'Segoe UI',
+          Roboto,
+          sans-serif;
+        text-align: center;
+      }
+
+      body::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.08;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      }
+
+      .blob {
+        position: fixed;
+        width: clamp(16rem, 45vw, 34rem);
+        aspect-ratio: 1;
+        border-radius: 42% 58% 63% 37% / 45% 40% 60% 55%;
+        background: var(--primary);
+        filter: blur(70px);
+        opacity: 0.35;
+        animation: drift 18s ease-in-out infinite alternate;
+      }
+
+      .blob-1 {
+        top: -10%;
+        left: -8%;
+      }
+
+      .blob-2 {
+        right: 5%;
+        bottom: -12%;
+        opacity: 0.2;
+        animation-duration: 22s;
+        animation-direction: alternate-reverse;
+      }
+
+      main {
+        position: relative;
+        top: var(--offset);
+        z-index: 1;
+        display: grid;
+        justify-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+      }
+
+      h1 {
+        font-size: clamp(4rem, min(24vw, 32vh), 15rem);
+        font-weight: 800;
+        line-height: 0.9;
+        letter-spacing: -0.06em;
+        background: linear-gradient(
+          110deg,
+          var(--secondary) 40%,
+          var(--primary) 50%,
+          var(--secondary) 60%
+        );
+        background-size: 300% 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: shimmer 6s linear infinite;
+      }
+
+      .loader {
+        width: 7rem;
+        height: 2px;
+        overflow: hidden;
+        border-radius: 1px;
+        background: rgb(248 245 236 / 0.15);
+      }
+
+      .loader::after {
+        content: '';
+        display: block;
+        width: 40%;
+        height: 100%;
+        background: var(--primary);
+        animation: slide 1.8s ease-in-out infinite;
+      }
+
+      .tagline {
+        padding-left: clamp(0.15em, 1vw, 0.3em);
+        font-size: 0.8125rem;
+        letter-spacing: clamp(0.15em, 1vw, 0.3em);
+        text-transform: uppercase;
+        text-wrap: balance;
+        opacity: 0.6;
+      }
+
+      .contact-wrap {
+        position: relative;
+        margin-top: 0.5rem;
+      }
+
+      .contact {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.85rem;
+        padding: 0.75rem 1.5rem;
+        border: 1px solid rgb(137 188 217 / 0.5);
+        border-radius: 999px;
+        color: var(--secondary);
+        font-size: 0.875rem;
+        text-decoration: none;
+        transition:
+          background-color 0.25s,
+          color 0.25s,
+          border-color 0.25s;
+      }
+
+      .contact-label {
+        font-weight: 600;
+        letter-spacing: 0.08em;
+      }
+
+      .contact-address {
+        padding-left: 0.85rem;
+        border-left: 1px solid currentColor;
+        opacity: 0.7;
+      }
+
+      .contact:hover {
+        border-color: var(--primary);
+        background: var(--primary);
+        color: var(--background);
+      }
+
+      .contact:focus-visible {
+        outline: 2px solid var(--primary);
+        outline-offset: 4px;
+      }
+
+      .feedback {
+        position: absolute;
+        top: calc(100% + 0.75rem);
+        left: 50%;
+        font-size: 0.8125rem;
+        letter-spacing: 0.05em;
+        white-space: nowrap;
+        color: var(--primary);
+        opacity: 0;
+        transform: translate(-50%, -0.25rem);
+        transition:
+          opacity 0.25s,
+          transform 0.25s;
+      }
+
+      .feedback.is-visible {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+
+      @media (max-height: 30rem) {
+        main {
+          gap: 1rem;
+        }
+      }
+
+      @keyframes drift {
+        to {
+          transform: translate(12vw, 10vh) rotate(60deg) scale(1.15);
+          border-radius: 60% 40% 35% 65% / 55% 60% 40% 45%;
+        }
+      }
+
+      @keyframes shimmer {
+        0% {
+          background-position: 100% 0;
+        }
+        60%,
+        100% {
+          background-position: 0% 0;
+        }
+      }
+
+      @keyframes slide {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(250%);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .blob,
+        h1,
+        .loader::after {
+          animation: none;
+        }
+
+        .contact,
+        .feedback {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blob blob-1" aria-hidden="true"></div>
+    <div class="blob blob-2" aria-hidden="true"></div>
+
+    <main>
+      <h1>soon</h1>
+      <div class="loader" aria-hidden="true"></div>
+      <p class="tagline">Something new is taking shape</p>
+      <div class="contact-wrap">
+        <a class="contact" href="mailto:mail@rekyi.de">
+          <span class="contact-label">contact me</span>
+          <span class="contact-address">mail@rekyi.de</span>
+        </a>
+        <p class="feedback" role="status" aria-live="polite"></p>
+      </div>
+    </main>
+
+    <script>
+      const EMAIL = 'mail@rekyi.de';
+      const contact = document.querySelector('.contact');
+      const feedback = document.querySelector('.feedback');
+      let hideTimer;
+
+      contact.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(EMAIL);
+          feedback.textContent = 'Email copied to clipboard';
+          feedback.classList.add('is-visible');
+          clearTimeout(hideTimer);
+          hideTimer = setTimeout(() => feedback.classList.remove('is-visible'), 2500);
+        } catch {
+          feedback.textContent = '';
+        }
+      });
+    </script>
+  </body>
+</html>
