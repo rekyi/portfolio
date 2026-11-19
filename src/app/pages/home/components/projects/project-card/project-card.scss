@@ -11,12 +11,17 @@
   @include flex(column, start, stretch, 1.4375rem);
 
   @include desktop {
-    padding: 2.25rem var(--element-project-padding) 1.75rem;
+    padding: 2.25rem calc(var(--element-project-padding) - 2rem) 1.75rem
+      var(--element-project-padding);
 
     display: grid;
     grid-template-columns: minmax(0, 691fr) minmax(0, 453fr);
     grid-template-rows: auto auto auto 1fr;
     gap: 0.9375rem 3.25rem;
+  }
+
+  @include widescreen {
+    grid-template-columns: minmax(0, 1fr) 30rem;
   }
 }
 
@@ -116,26 +121,20 @@
   }
 }
 
-.preview img,
 .coming-soon {
   width: min(100%, 16.8125rem);
-  height: auto;
   aspect-ratio: 269 / 167;
   border-radius: 1.875rem;
 
-  object-fit: cover;
+  background-color: var(--secondary-clr);
+  color: var(--primary-clr);
+
+  @include flex(row, center, center);
 
   @include desktop {
     width: 100%;
     aspect-ratio: 453 / 312;
   }
-}
-
-.coming-soon {
-  background-color: var(--secondary-clr);
-  color: var(--primary-clr);
-
-  @include flex(row, center, center);
 }
 
 .details {

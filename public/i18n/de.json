@@ -52,6 +52,7 @@
     "tab": "Projekt",
     "technologies": "Technologien",
     "previewAlt": "Vorschau von {{title}}",
+    "showImage": "Bild {{number}} anzeigen",
     "comingSoonPreview": "Demnächst ...",
     "aboutTitle": "Über das Projekt",
     "workProcessTitle": "Meine Arbeitsweise",

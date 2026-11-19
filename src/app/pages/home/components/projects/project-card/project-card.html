@@ -26,14 +26,8 @@
   </div>
 
   <div class="preview">
-    @if (project().image; as image) {
-      <img
-        [src]="image.src"
-        [alt]="'projects.previewAlt' | translate: { title: (project().titleKey | translate) }"
-        [width]="image.width"
-        [height]="image.height"
-        loading="lazy"
-      />
+    @if (project().images; as images) {
+      <app-project-slider [images]="images" [titleKey]="project().titleKey" />
     } @else {
       <p class="coming-soon"><app-stable-text key="projects.comingSoonPreview" /></p>
     }

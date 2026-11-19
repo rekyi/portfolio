@@ -14,7 +14,7 @@ export interface Project {
   workProcessKey?: string;
   groupWorkKey?: string;
   learningsKey?: string;
-  image?: ProjectImage;
+  images?: ProjectImage[];
   liveUrl?: string;
   githubUrl?: string;
   isOngoing?: boolean;
