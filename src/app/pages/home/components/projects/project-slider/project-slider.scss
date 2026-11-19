@@ -1,25 +1,21 @@
 @use 'mixins' as *;
 
 :host {
-  width: min(100%, 20rem);
+  width: min(100%, 25rem);
 
   display: block;
 
-  @include desktop {
+  @include container(project-card, 45rem) {
     width: min(100%, 30rem);
   }
 }
 
 .viewport {
-  aspect-ratio: 320 / 200;
+  aspect-ratio: 3 / 2;
   border-radius: 1.625rem;
   overflow: hidden;
 
   touch-action: pan-y;
-
-  @include desktop {
-    aspect-ratio: 480 / 320;
-  }
 }
 
 .track {

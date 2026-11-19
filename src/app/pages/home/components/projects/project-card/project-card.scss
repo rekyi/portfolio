@@ -1,6 +1,8 @@
 @use 'mixins' as *;
 
 :host {
+  container: project-card / inline-size;
+
   display: block;
 }
 
@@ -10,6 +12,19 @@
 
   @include flex(column, start, stretch, 1.4375rem);
 
+  @include container(project-card, 45rem) {
+    padding-inline: max(1.4375rem, (100% - 42rem) / 2);
+
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    grid-template-areas:
+      'meta preview'
+      'details details'
+      'links links';
+    align-items: center;
+    column-gap: 2rem;
+  }
+
   @include desktop {
     padding: 2.25rem calc(var(--element-project-padding) - 2rem) 1.75rem
       var(--element-project-padding);
@@ -17,6 +32,8 @@
     display: grid;
     grid-template-columns: minmax(0, 691fr) minmax(0, 453fr);
     grid-template-rows: auto auto auto 1fr;
+    grid-template-areas: none;
+    align-items: stretch;
     gap: 0.9375rem 3.25rem;
   }
 
@@ -29,6 +46,10 @@
   font-size: 0.875rem;
 
   @include flex(column, start, start, 0.3125rem);
+
+  @include container(project-card, 45rem) {
+    grid-area: meta;
+  }
 
   @include desktop {
     font-size: 1.125rem;
@@ -116,14 +137,18 @@
 .preview {
   @include flex(row, center, center);
 
+  @include container(project-card, 45rem) {
+    grid-area: preview;
+  }
+
   @include desktop {
     grid-area: 2 / 2;
   }
 }
 
 .coming-soon {
-  width: min(100%, 16.8125rem);
-  aspect-ratio: 269 / 167;
+  width: min(100%, 25rem);
+  aspect-ratio: 3 / 2;
   border-radius: 1.875rem;
 
   background-color: var(--secondary-clr);
@@ -131,15 +156,18 @@
 
   @include flex(row, center, center);
 
-  @include desktop {
-    width: 100%;
-    aspect-ratio: 453 / 312;
+  @include container(project-card, 45rem) {
+    width: min(100%, 30rem);
   }
 }
 
 .details {
   flex-grow: 1;
   @include flex(column, start, stretch, 1.75rem);
+
+  @include container(project-card, 45rem) {
+    grid-area: details;
+  }
 
   @include desktop {
     grid-row: 1 / -1;
@@ -211,6 +239,10 @@
 
   flex-wrap: wrap;
   @include flex(row, center, center, 1rem);
+
+  @include container(project-card, 45rem) {
+    grid-area: links;
+  }
 
   @include desktop {
     margin-top: 1.125rem;

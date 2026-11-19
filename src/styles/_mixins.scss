@@ -16,6 +16,12 @@
   }
 }
 
+@mixin container($name, $min-width) {
+  @container #{$name} (min-width: #{$min-width}) {
+    @content;
+  }
+}
+
 @mixin flex($direction: row, $justify: center, $align: center, $gap: 0) {
   display: flex;
   flex-direction: $direction;
