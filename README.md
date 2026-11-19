@@ -16,6 +16,8 @@
 
 ---
 
+![Portfolio hero section](docs/readme.webp)
+
 ## About
 
 A single-page portfolio that presents who I am, what I work with and what I have built. It is a modern Angular application with standalone components, signals and the standard control flow, fully responsive from 320 px up to widescreen and available in English and German.
@@ -120,7 +122,7 @@ Create an empty file named `maintenance.on` in the web root to show `maintenance
 
 ## Credits
 
-A learning project at heart: built to bring my work together in one place and to get hands-on with modern Angular – signals, standalone components and the built-in control flow.. The design is based on a template owned by Developer Akademie GmbH.
+A learning project at heart: built to bring my work together in one place and to get hands-on with modern Angular – signals, standalone components and the built-in control flow. The design is based on a template owned by Developer Akademie GmbH.
 
 ## Contact
 
