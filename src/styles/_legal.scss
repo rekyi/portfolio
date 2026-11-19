@@ -1,0 +1,89 @@
+@use 'mixins' as *;
+
+@mixin legal-page {
+  .legal-page {
+    padding-block: 1rem clamp(3.5rem, 7.15vw, 6.5rem);
+    padding-inline: clamp(1rem, 16.9vw - 2.7rem, 12.5rem);
+
+    font-size: clamp(0.9375rem, 0.875rem + 0.25vw, 1rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+
+    display: grid;
+    grid-template-columns: minmax(0, 62.5rem);
+
+    @include desktop {
+      padding-top: clamp(2.5rem, 4.17vw, 3.75rem);
+    }
+  }
+
+  .back-link {
+    margin-bottom: 1.5rem;
+
+    justify-self: start;
+    transition: translate 200ms ease;
+
+    @include hover {
+      translate: -0.25rem 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  h1 {
+    margin-bottom: clamp(1.75rem, 4.17vw, 3.75rem);
+
+    color: var(--primary-clr);
+    font-family: var(--font-headline);
+    font-size: clamp(2rem, 1.5rem + 2.5vw, 3.75rem);
+    font-weight: 400;
+  }
+
+  h2 {
+    margin-bottom: clamp(0.25rem, 0.9vw, 0.75rem);
+
+    color: var(--primary-clr);
+    font-size: clamp(1.375rem, 1.2rem + 0.4vw, 1.5rem);
+    font-weight: 700;
+  }
+
+  h3 {
+    color: var(--primary-clr);
+    font-size: clamp(1rem, 0.85rem + 0.45vw, 1.25rem);
+    font-weight: 700;
+  }
+
+  section section {
+    margin-top: 1.5rem;
+  }
+
+  p + p {
+    margin-top: 1.125rem;
+  }
+
+  ul {
+    padding-left: 1.5rem;
+  }
+
+  address {
+    font-style: normal;
+  }
+
+  a {
+    color: var(--primary-clr);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+
+    @include hover {
+      text-decoration: underline;
+    }
+
+    @include focus-ring;
+  }
+}
