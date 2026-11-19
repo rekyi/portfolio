@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
     githubUrl: 'blub',
   },
   {
-    title: 'Ongoing Blub',
+    title: 'Ongoing Project',
     technologies: PLACEHOLDER_TECHNOLOGIES,
     isOngoing: true,
     about:
