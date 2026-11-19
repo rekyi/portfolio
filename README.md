@@ -120,7 +120,7 @@ Create an empty file named `maintenance.on` in the web root to show `maintenance
 
 ## Credits
 
-Built as part of the fullstack developer training at [Developer Akademie](https://developerakademie.com). The design is based on a template owned by Developer Akademie GmbH.
+A learning project at heart: built to bring my work together in one place and to get hands-on with modern Angular – signals, standalone components and the built-in control flow.. The design is based on a template owned by Developer Akademie GmbH.
 
 ## Contact
 
