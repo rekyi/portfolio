@@ -1,6 +1,5 @@
 import { Component, computed, input, signal } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
-import { ProjectImage } from '../../../../../shared/models/project.model';
 
 const SWIPE_THRESHOLD = 50;
 const MAX_DOTS = 3;
@@ -12,7 +11,7 @@ const MAX_DOTS = 3;
   templateUrl: './project-slider.html',
 })
 export class ProjectSlider {
-  readonly images = input.required<ProjectImage[]>();
+  readonly images = input.required<string[]>();
   readonly titleKey = input.required<string>();
 
   protected readonly currentIndex = signal(0);

@@ -1,11 +1,5 @@
 import { Skill } from './skill.model';
 
-export interface ProjectImage {
-  src: string;
-  width: number;
-  height: number;
-}
-
 export interface Project {
   titleKey: string;
   durationKey?: string;
@@ -14,7 +8,7 @@ export interface Project {
   workProcessKey?: string;
   groupWorkKey?: string;
   learningsKey?: string;
-  images?: ProjectImage[];
+  images?: string[];
   liveUrl?: string;
   githubUrl?: string;
   isOngoing?: boolean;

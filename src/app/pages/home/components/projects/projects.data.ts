@@ -1,10 +1,11 @@
 import { Project } from '../../../../shared/models/project.model';
 import { Skill } from '../../../../shared/models/skill.model';
+import { TECHNOLOGIES } from '../../../../shared/models/technologies.data';
 
 const PLACEHOLDER_TECHNOLOGIES: Skill[] = [
-  { name: 'HTML', icon: { src: '/icons/desktop_html.svg', width: 54, height: 60 } },
-  { name: 'CSS', icon: { src: '/icons/desktop_css.svg', width: 54, height: 60 } },
-  { name: 'JavaScript', icon: { src: '/icons/desktop_js.svg', width: 60, height: 60 } },
+  TECHNOLOGIES.html,
+  TECHNOLOGIES.css,
+  TECHNOLOGIES.javascript,
 ];
 
 export const PROJECTS: Project[] = [
@@ -16,9 +17,9 @@ export const PROJECTS: Project[] = [
     workProcessKey: 'projects.hollowbloom.workProcess',
     groupWorkKey: 'projects.hollowbloom.groupWork',
     images: [
-      { src: '/images/projects/projects_hollowbloom_1.webp', width: 1200, height: 800 },
-      { src: '/images/projects/projects_hollowbloom_2.webp', width: 1200, height: 800 },
-      { src: '/images/projects/projects_hollowbloom_3.webp', width: 1200, height: 800 },
+      '/images/projects/projects_hollowbloom_1.webp',
+      '/images/projects/projects_hollowbloom_2.webp',
+      '/images/projects/projects_hollowbloom_3.webp',
     ],
     liveUrl: 'https://hollowbloom.rekyi.de',
     githubUrl: 'https://github.com/rekyi/hollowbloom',
@@ -31,11 +32,11 @@ export const PROJECTS: Project[] = [
     workProcessKey: 'projects.pokedex.workProcess',
     learningsKey: 'projects.pokedex.learnings',
     images: [
-      { src: '/images/projects/projects_pokedex_1.webp', width: 1200, height: 800 },
-      { src: '/images/projects/projects_pokedex_2.webp', width: 1200, height: 800 },
+      '/images/projects/projects_pokedex_1.webp',
+      '/images/projects/projects_pokedex_2.webp',
     ],
     liveUrl: 'https://pokedex.rekyi.de',
-    githubUrl: 'https://github.com/rekyi/Pokedex',
+    githubUrl: 'https://github.com/rekyi/pokedex',
   },
   {
     titleKey: 'projects.join.title',
@@ -44,7 +45,7 @@ export const PROJECTS: Project[] = [
     aboutKey: 'projects.join.about',
     workProcessKey: 'projects.join.workProcess',
     groupWorkKey: 'projects.join.groupWork',
-    images: [{ src: '/images/projects/project_card_placeholder_3.webp', width: 600, height: 400 }],
+    images: ['/images/projects/project_card_placeholder_3.webp'],
     liveUrl: 'blub',
     githubUrl: 'blub',
   },
@@ -53,6 +54,6 @@ export const PROJECTS: Project[] = [
     technologies: PLACEHOLDER_TECHNOLOGIES,
     isOngoing: true,
     aboutKey: 'projects.ongoing.about',
-    images: [{ src: '/images/projects/project_card_placeholder_4.webp', width: 600, height: 400 }],
+    images: ['/images/projects/project_card_placeholder_4.webp'],
   },
 ];

@@ -4,13 +4,13 @@
   (pointerup)="handlePointerUp($event)"
 >
   <ul class="track" [style.translate]="trackOffset()">
-    @for (image of images(); track image.src; let index = $index) {
+    @for (image of images(); track image; let index = $index) {
       <li class="slide" [attr.aria-hidden]="index !== currentIndex()">
         <img
-          [src]="image.src"
+          [src]="image"
           [alt]="'projects.previewAlt' | translate: { title: (titleKey() | translate) }"
-          [width]="image.width"
-          [height]="image.height"
+          width="1200"
+          height="800"
           loading="lazy"
           draggable="false"
         />

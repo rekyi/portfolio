@@ -18,7 +18,7 @@
 
 ## About
 
-A single-page portfolio that presents who I am, what I work with and what I have built. It is a modern Angular application with standalone components, signals and the new control flow, fully responsive from 320 px up to widescreen and available in English and German.
+A single-page portfolio that presents who I am, what I work with and what I have built. It is a modern Angular application with standalone components, signals and the standard control flow, fully responsive from 320 px up to widescreen and available in English and German.
 
 ## Features
 
