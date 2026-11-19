@@ -21,14 +21,14 @@
 
 @if (hasMultipleImages()) {
   <div class="dots">
-    @for (image of images(); track image.src; let index = $index) {
+    @for (target of dotTargets(); track target; let dot = $index) {
       <button
         type="button"
         class="dot"
-        [class.is-active]="index === currentIndex()"
-        [attr.aria-current]="index === currentIndex()"
-        [attr.aria-label]="'projects.showImage' | translate: { number: index + 1 }"
-        (click)="showSlide(index)"
+        [class.is-active]="dot === activeDot()"
+        [attr.aria-current]="dot === activeDot()"
+        [attr.aria-label]="'projects.showImage' | translate: { number: target + 1 }"
+        (click)="showSlide(target)"
       ></button>
     }
   </div>

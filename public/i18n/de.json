@@ -68,15 +68,15 @@
       "workProcess": "Wie halten Sie Ihren Code sauber und wartbar? Haben Sie das Projekt in wiederverwendbare Module oder Komponenten zerlegt? Gehen Sie auf Doku, Benennung und Tests ein.",
       "groupWork": "Wie groß war das Team und welche Rolle hatten Sie? Beschreiben Sie Ihre Aufgaben in 1–2 Sätzen, z. B. Login, Dashboard oder Chat. Welche Technologien haben Sie genutzt? Gute Teamarbeit ist ein Pluspunkt."
     },
-    "sharkie": {
-      "title": "Blub",
+    "pokedex": {
+      "title": "Pokédex",
       "duration": "Dauer: 5 Wochen",
       "about": "Ein einfaches Jump-and-Run-Spiel mit objektorientiertem Ansatz. Helfen Sie Sharkie, Münzen und Giftflaschen gegen den Killerwal zu sammeln.",
       "workProcess": "Wie halten Sie Ihren Code sauber und wartbar? Haben Sie das Projekt in wiederverwendbare Module oder Komponenten zerlegt? Gehen Sie auf Doku, Benennung und Tests ein.",
       "learnings": "Da Sie ständig neue Technologien lernen, hat Ihnen dieses Projekt vielleicht gefallen, weil Sie tief in eine Technologie eintauchen konnten. Nennen Sie Details, etwa das Framework oder die Sprache."
     },
     "join": {
-      "title": "Blub",
+      "title": "Join",
       "duration": "Dauer: 2 Monate",
       "about": "Aufgabenmanager nach dem Kanban-Prinzip. Aufgaben per Drag-and-drop erstellen und ordnen, Nutzer und Kategorien zuweisen.",
       "workProcess": "Wie halten Sie Ihren Code sauber und wartbar? Haben Sie das Projekt in wiederverwendbare Module oder Komponenten zerlegt? Gehen Sie auf Doku, Benennung und Tests ein.",
