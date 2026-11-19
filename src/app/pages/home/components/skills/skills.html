@@ -1,5 +1,5 @@
 <section id="skills" class="content">
-  <app-section-title>My Skills</app-section-title>
+  <app-section-title><app-stable-text key="skills.title" /></app-section-title>
 
   <div class="skills-body">
     <ul class="skill-list">
@@ -21,8 +21,8 @@
 
     <div class="learning">
       <p class="learning-title">
-        <span class="title-mobile">What I am currently learning</span>
-        <span class="title-desktop">I am currently learning</span>
+        <span class="title-mobile"><app-stable-text key="skills.learningTitleMobile" /></span>
+        <span class="title-desktop"><app-stable-text key="skills.learningTitleDesktop" /></span>
       </p>
       @if (learningSkills.length > 0) {
         <ul class="learning-list">
@@ -42,14 +42,11 @@
           }
         </ul>
       }
-      <p class="learning-text">
-        I am motivated to continually improve my skills, implement innovative solutions and stay
-        abreast of new technologies.
-      </p>
+      <p class="learning-text"><app-stable-text key="skills.learningText" /></p>
     </div>
   </div>
 
   <a appPrimaryButton class="cta-btn" routerLink="/" fragment="contact">
-    Let's talk
+    <app-stable-text key="common.letsTalk" />
   </a>
 </section>

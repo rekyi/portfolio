@@ -5,5 +5,5 @@ export interface AboutStatement {
   icon: string;
   iconWidth: number;
   iconHeight: number;
-  text: string;
+  textKey: string;
 }

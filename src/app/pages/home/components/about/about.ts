@@ -1,7 +1,9 @@
 import { Component, DestroyRef, computed, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { translate, TranslatePipe } from '@ngx-translate/core';
 import { PrimaryButton } from '../../../../shared/components/primary-button/primary-button';
 import { SectionTitle } from '../../../../shared/components/section-title/section-title';
+import { StableText } from '../../../../shared/components/stable-text/stable-text';
 import { ABOUT_STATEMENTS } from './about.data';
 
 const TYPE_DELAY = 120;
@@ -10,7 +12,7 @@ const HOLD_DELAY = 2000;
 const ICON_DELAY = 300;
 
 @Component({
-  imports: [RouterLink, PrimaryButton, SectionTitle],
+  imports: [RouterLink, TranslatePipe, PrimaryButton, SectionTitle, StableText],
   selector: 'app-about',
   styleUrl: './about.scss',
   templateUrl: './about.html',
@@ -23,8 +25,10 @@ export class About {
   private timeoutId?: ReturnType<typeof setTimeout>;
   protected readonly isIconVisible = signal(false);
   protected readonly activeStatement = computed(() => this.statements[this.activeIndex()]);
+  private readonly translatedStatement = translate(() => this.activeStatement().textKey);
+  private readonly statementText = computed(() => String(this.translatedStatement()));
   protected readonly typedText = computed(() =>
-    this.activeStatement().text.slice(0, this.typedLength()),
+    this.statementText().slice(0, this.typedLength()),
   );
 
   constructor() {
@@ -46,7 +50,7 @@ export class About {
   }
 
   private typeNextLetter(): void {
-    if (this.typedLength() === this.activeStatement().text.length) {
+    if (this.typedLength() >= this.statementText().length) {
       this.schedule(() => this.deleteLastLetter(), HOLD_DELAY);
       return;
     }
@@ -55,11 +59,11 @@ export class About {
   }
 
   private deleteLastLetter(): void {
-    if (this.typedLength() === 0) {
+    if (this.typedLength() <= 0) {
       this.hideIcon();
       return;
     }
-    this.typedLength.update((length) => length - 1);
+    this.typedLength.update((length) => Math.min(length, this.statementText().length) - 1);
     this.schedule(() => this.deleteLastLetter(), this.getLetterDelay(DELETE_DELAY));
   }
 

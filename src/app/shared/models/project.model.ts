@@ -7,13 +7,13 @@ export interface ProjectImage {
 }
 
 export interface Project {
-  title: string;
-  duration?: string;
+  titleKey: string;
+  durationKey?: string;
   technologies: Skill[];
-  about: string;
-  workProcess?: string;
-  groupWork?: string;
-  learnings?: string;
+  aboutKey: string;
+  workProcessKey?: string;
+  groupWorkKey?: string;
+  learningsKey?: string;
   image?: ProjectImage;
   liveUrl?: string;
   githubUrl?: string;

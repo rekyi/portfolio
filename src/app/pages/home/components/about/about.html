@@ -1,5 +1,5 @@
 <section id="about" class="content">
-  <app-section-title>Why me</app-section-title>
+  <app-section-title><app-stable-text key="about.title" /></app-section-title>
 
   <div class="about-body">
     <div class="statement">
@@ -13,18 +13,16 @@
         />
       </div>
       <p>
-        <span class="highlight">I am</span><span class="typed">{{ typedText() }}</span>
+        <span class="highlight">{{ 'about.iAm' | translate }}</span
+        ><span class="typed">{{ typedText() }}</span>
       </p>
     </div>
 
     <div class="text">
-      <p>Why are you passionate about coding?</p>
-      <p>
-        You can include some key traits like: analytical thinking, creativity, persistence and
-        collaboration. A problem-solving mindset is always nice to have.
-      </p>
+      <p><app-stable-text key="about.question" /></p>
+      <p><app-stable-text key="about.text" /></p>
       <a appPrimaryButton variant="secondary" class="cta-btn" routerLink="/" fragment="contact">
-        Let's talk
+        <app-stable-text key="common.letsTalk" />
       </a>
     </div>
   </div>

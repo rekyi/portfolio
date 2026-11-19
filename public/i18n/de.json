@@ -1,0 +1,126 @@
+{
+  "common": {
+    "home": "Startseite",
+    "backHome": "Zurück zur Startseite",
+    "letsTalk": "Kontakt"
+  },
+  "nav": {
+    "ariaLabel": "Hauptmenü",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "about": "Warum ich",
+    "skills": "Skills",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "language": "Sprache",
+    "languageDe": "Deutsch",
+    "languageEn": "Englisch"
+  },
+  "footer": {
+    "legal": "Rechtliches",
+    "legalNotice": "Impressum",
+    "privacyPolicy": "Datenschutz"
+  },
+  "social": {
+    "email": "E-Mail",
+    "github": "GitHub"
+  },
+  "hero": {
+    "portraitAlt": "Porträt von Blub",
+    "jobTitle": "Fullstack Developer",
+    "scrollDown": "Zu „Warum ich“ scrollen"
+  },
+  "about": {
+    "title": "Warum ich",
+    "iAm": "Ich bin",
+    "statements": {
+      "location": " in Blub ansässig",
+      "remote": " remote verfügbar",
+      "relocate": " umzugsbereit"
+    },
+    "question": "Was begeistert Sie am Programmieren?",
+    "text": "Nennen Sie Kerneigenschaften wie analytisches Denken, Kreativität, Ausdauer und Teamarbeit. Lösungsorientiertes Denken ist immer ein Plus."
+  },
+  "skills": {
+    "title": "Meine Skills",
+    "learningTitleMobile": "Was ich gerade lerne",
+    "learningTitleDesktop": "Ich lerne gerade",
+    "learningText": "Ich will mich stetig verbessern, innovative Lösungen umsetzen und neue Technologien verfolgen."
+  },
+  "projects": {
+    "title": "Meine Projekte",
+    "tab": "Projekt",
+    "technologies": "Technologien",
+    "previewAlt": "Vorschau von {{title}}",
+    "comingSoonPreview": "Demnächst ...",
+    "aboutTitle": "Über das Projekt",
+    "workProcessTitle": "Meine Arbeitsweise",
+    "groupWorkTitle": "Meine Teamerfahrung",
+    "learningsTitle": "Was ich gelernt habe",
+    "liveTest": "Live-Test",
+    "github": "GitHub",
+    "comingSoon": "Demnächst",
+    "hollowbloom": {
+      "title": "Hollowbloom",
+      "duration": "Dauer: 3 Wochen",
+      "about": "Diese App ist ein Slack-Klon. Sie verbessert Kommunikation und Zusammenarbeit im Team durch eine intuitive Oberfläche, Echtzeit-Chats und klare Kanäle.",
+      "workProcess": "Wie halten Sie Ihren Code sauber und wartbar? Haben Sie das Projekt in wiederverwendbare Module oder Komponenten zerlegt? Gehen Sie auf Doku, Benennung und Tests ein.",
+      "groupWork": "Wie groß war das Team und welche Rolle hatten Sie? Beschreiben Sie Ihre Aufgaben in 1–2 Sätzen, z. B. Login, Dashboard oder Chat. Welche Technologien haben Sie genutzt? Gute Teamarbeit ist ein Pluspunkt."
+    },
+    "sharkie": {
+      "title": "Blub",
+      "duration": "Dauer: 5 Wochen",
+      "about": "Ein einfaches Jump-and-Run-Spiel mit objektorientiertem Ansatz. Helfen Sie Sharkie, Münzen und Giftflaschen gegen den Killerwal zu sammeln.",
+      "workProcess": "Wie halten Sie Ihren Code sauber und wartbar? Haben Sie das Projekt in wiederverwendbare Module oder Komponenten zerlegt? Gehen Sie auf Doku, Benennung und Tests ein.",
+      "learnings": "Da Sie ständig neue Technologien lernen, hat Ihnen dieses Projekt vielleicht gefallen, weil Sie tief in eine Technologie eintauchen konnten. Nennen Sie Details, etwa das Framework oder die Sprache."
+    },
+    "join": {
+      "title": "Blub",
+      "duration": "Dauer: 2 Monate",
+      "about": "Aufgabenmanager nach dem Kanban-Prinzip. Aufgaben per Drag-and-drop erstellen und ordnen, Nutzer und Kategorien zuweisen.",
+      "workProcess": "Wie halten Sie Ihren Code sauber und wartbar? Haben Sie das Projekt in wiederverwendbare Module oder Komponenten zerlegt? Gehen Sie auf Doku, Benennung und Tests ein.",
+      "groupWork": "Wie groß war das Team und welche Rolle hatten Sie? Beschreiben Sie Ihre Aufgaben in 1–2 Sätzen, z. B. Login, Dashboard oder Chat. Welche Technologien haben Sie genutzt? Gute Teamarbeit ist ein Pluspunkt."
+    },
+    "ongoing": {
+      "title": "Projekt in Arbeit",
+      "about": "Woran arbeiten Sie gerade, welche Funktionen setzen Sie um? Was ist Ihr Erfolgsrezept? Nennen Sie gute Planung, Codequalität und Umsetzung. Zeigen Sie, dass Sie Neues lernen und sich stetig verbessern wollen."
+    }
+  },
+  "testimonials": {
+    "title": "Teamgeist gesucht?",
+    "subtitle": "Das sagt mein Team über mich",
+    "project": "Projekt",
+    "linkedin": "LinkedIn-Profil",
+    "quotes": {
+      "first": "Claudia hat im Team Inhalte entwickelt, formatiert und geliefert. Sie ist eine zuverlässige und freundliche Person.",
+      "second": "Claudia ist zuverlässig und freundlich. Sie arbeitet strukturiert und schreibt klaren Code. Ich empfehle sie als Kollegin.",
+      "third": "Eine verlässliche Teamplayerin, die auch unter Termindruck ruhig bleibt. Strukturiert, mit sauberem Code."
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "phone": "Tel.: {{phone}}",
+    "email": "E-Mail: {{email}}",
+    "intro": "Ermutigen Sie zur Kontaktaufnahme und beschreiben Sie, welche Rolle Sie suchen. Zeigen Sie, welchen Mehrwert Ihre Arbeit bietet.",
+    "introExample": "Beispiel: Schreiben Sie mir gern zu Jobangeboten oder Chancen wie: ...",
+    "formTitle": "Arbeiten wir zusammen!",
+    "nameLabel": "Ihr Name",
+    "namePlaceholder": "Ihr Name",
+    "nameRequired": "Bitte geben Sie Ihren Namen ein.",
+    "emailLabel": "Ihre E-Mail",
+    "emailPlaceholder": "Ihre E-Mail",
+    "emailRequired": "Bitte geben Sie Ihre E-Mail ein.",
+    "emailInvalid": "Diese E-Mail-Adresse ist ungültig.",
+    "messageLabel": "Ihre Nachricht",
+    "messagePlaceholder": "Ihre Nachricht",
+    "messageRequired": "Bitte geben Sie eine Nachricht ein.",
+    "privacyBefore": "Ich stimme der",
+    "privacyLink": "Datenschutzerklärung",
+    "privacyAfter": "und der Datenverarbeitung zu.",
+    "privacyRequired": "Bitte akzeptieren Sie den Datenschutz.",
+    "send": "Senden",
+    "sendSuccess": "Vielen Dank! Ihre Nachricht wurde gesendet.",
+    "sendError": "Ihre Nachricht konnte leider nicht gesendet werden. Bitte versuchen Sie es später erneut.",
+    "scrollTop": "Nach oben scrollen"
+  }
+}

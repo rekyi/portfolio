@@ -1,6 +1,6 @@
 export interface Testimonial {
   name: string;
   project: string;
-  quote: string;
+  quoteKey: string;
   linkedinUrl: string;
 }

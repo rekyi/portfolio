@@ -1,0 +1,14 @@
+@for (variant of variants(); track variant.lang) {
+  <span
+    class="variant"
+    [class.is-active]="variant.isActive"
+    [attr.lang]="variant.lang"
+    [attr.aria-hidden]="variant.isActive ? null : 'true'"
+  >
+    @if (template(); as template) {
+      <ng-container [ngTemplateOutlet]="template" [ngTemplateOutletContext]="getContext(variant)" />
+    } @else {
+      {{ variant.texts.join(' ') }}
+    }
+  </span>
+}

@@ -1,10 +1,16 @@
 <article class="testimonial-card">
   <h3 class="name">{{ testimonial().name }}</h3>
   <p class="project">
-    Project <span class="project-name">{{ testimonial().project }}</span>
+    <app-stable-text key="testimonials.project">
+      <ng-template let-label>
+        {{ label }} <span class="project-name">{{ testimonial().project }}</span>
+      </ng-template>
+    </app-stable-text>
   </p>
   <p class="quote">
-    <q>{{ testimonial().quote }}</q>
+    <app-stable-text [key]="testimonial().quoteKey">
+      <ng-template let-quote><q>{{ quote }}</q></ng-template>
+    </app-stable-text>
   </p>
   <a
     class="linkedin-link"
@@ -12,6 +18,6 @@
     target="_blank"
     rel="noopener noreferrer"
   >
-    LinkedIn Profile
+    <app-stable-text key="testimonials.linkedin" />
   </a>
 </article>

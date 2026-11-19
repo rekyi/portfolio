@@ -2,7 +2,7 @@ import { SocialLink } from './social-link.model';
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    label: 'Email',
+    labelKey: 'social.email',
     url: 'mailto:mail@rekyi.de',
     isExternal: false,
     icons: {
@@ -17,7 +17,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
     },
   },
   {
-    label: 'GitHub',
+    labelKey: 'social.github',
     url: 'https://github.com/rekyi',
     isExternal: true,
     icons: {

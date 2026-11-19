@@ -6,7 +6,7 @@ export interface SocialLinkIcon {
 }
 
 export interface SocialLink {
-  label: string;
+  labelKey: string;
   url: string;
   isExternal: boolean;
   icons: Record<SocialLinkVariant, SocialLinkIcon>;

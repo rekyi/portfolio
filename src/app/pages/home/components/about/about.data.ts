@@ -6,20 +6,20 @@ export const ABOUT_STATEMENTS: AboutStatement[] = [
     icon: '/icons/about_location.svg',
     iconWidth: 34,
     iconHeight: 41,
-    text: ' located in Blub',
+    textKey: 'about.statements.location',
   },
   {
     id: 'remote',
     icon: '/icons/about_remote.svg',
     iconWidth: 38,
     iconHeight: 26,
-    text: ' open to work remote',
+    textKey: 'about.statements.remote',
   },
   {
     id: 'relocate',
     icon: '/icons/about_relocate.svg',
     iconWidth: 32,
     iconHeight: 53,
-    text: ' open to relocate',
+    textKey: 'about.statements.relocate',
   },
 ];

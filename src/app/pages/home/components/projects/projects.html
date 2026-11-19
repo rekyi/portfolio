@@ -1,5 +1,5 @@
 <section id="projects">
-  <app-section-title>My Projects</app-section-title>
+  <app-section-title><app-stable-text key="projects.title" /></app-section-title>
 
   <div class="tabs" role="tablist">
     @for (project of projects; track $index) {
@@ -12,8 +12,8 @@
         (click)="activeIndex.set($index)"
       >
         {{ $index + 1 }}.
-        <span class="tab-mobile">Project</span>
-        <span class="tab-desktop">{{ project.title }}</span>
+        <span class="tab-mobile"><app-stable-text key="projects.tab" /></span>
+        <span class="tab-desktop"><app-stable-text [key]="project.titleKey" /></span>
       </button>
     }
   </div>

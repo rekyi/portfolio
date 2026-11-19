@@ -6,7 +6,7 @@
         [href]="link.url"
         [attr.target]="link.isExternal ? '_blank' : null"
         [attr.rel]="link.isExternal ? 'noopener noreferrer' : null"
-        [attr.aria-label]="link.label"
+        [attr.aria-label]="link.labelKey | translate"
       >
         <img
           class="icon-default"

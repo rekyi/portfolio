@@ -1,6 +1,11 @@
 <header>
-  <nav class="content" aria-label="Main">
-    <a class="logo" routerLink="/" aria-label="Home" (click)="closeMenu()">
+  <nav class="content" [attr.aria-label]="'nav.ariaLabel' | translate">
+    <a
+      class="logo"
+      routerLink="/"
+      [attr.aria-label]="'common.home' | translate"
+      (click)="closeMenu()"
+    >
       <img src="/icons/logo_placeholder.gif" alt="" width="57" height="72" />
     </a>
 
@@ -9,7 +14,7 @@
       type="button"
       aria-controls="main-menu"
       [attr.aria-expanded]="isMenuOpen()"
-      [attr.aria-label]="isMenuOpen() ? 'Close menu' : 'Open menu'"
+      [attr.aria-label]="(isMenuOpen() ? 'nav.closeMenu' : 'nav.openMenu') | translate"
       (click)="toggleMenu()"
     >
       @if (isMenuOpen()) {
@@ -21,15 +26,40 @@
 
     <div id="main-menu" class="menu" [class.open]="isMenuOpen()">
       <ul class="nav-links">
-        <li><a routerLink="/" fragment="about" (click)="closeMenu()">Why me</a></li>
-        <li><a routerLink="/" fragment="skills" (click)="closeMenu()">Skills</a></li>
-        <li><a routerLink="/" fragment="projects" (click)="closeMenu()">Projects</a></li>
-        <li><a routerLink="/" fragment="contact" (click)="closeMenu()">Contact</a></li>
+        <li>
+          <a routerLink="/" fragment="about" (click)="closeMenu()">
+            <app-stable-text key="nav.about" />
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" fragment="skills" (click)="closeMenu()">
+            <app-stable-text key="nav.skills" />
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" fragment="projects" (click)="closeMenu()">
+            <app-stable-text key="nav.projects" />
+          </a>
+        </li>
+        <li>
+          <a routerLink="/" fragment="contact" (click)="closeMenu()">
+            <app-stable-text key="nav.contact" />
+          </a>
+        </li>
       </ul>
 
-      <div class="language-switch">
-        <button type="button">DE</button>
-        <button type="button">EN</button>
+      <div class="language-switch" role="group" [attr.aria-label]="'nav.language' | translate">
+        @for (language of languages; track language.code) {
+          <button
+            type="button"
+            [class.active]="currentLang() === language.code"
+            [attr.aria-pressed]="currentLang() === language.code"
+            [attr.aria-label]="language.labelKey | translate"
+            (click)="setLanguage(language.code)"
+          >
+            {{ language.code | uppercase }}
+          </button>
+        }
       </div>
     </div>
   </nav>

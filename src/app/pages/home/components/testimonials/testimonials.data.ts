@@ -4,22 +4,19 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     name: 'Blub',
     project: 'Blub',
-    quote:
-      'Claudia had to develop, format and deliver content in collaboration with the team members. She is a reliable and friendly person.',
+    quoteKey: 'testimonials.quotes.first',
     linkedinUrl: 'Blub',
   },
   {
     name: 'Blub',
     project: 'Blub',
-    quote:
-      'Claudia is a reliable and friendly person. Works in a structured way and write a clear code. I recommend her as a colleague.',
+    quoteKey: 'testimonials.quotes.second',
     linkedinUrl: 'Blub',
   },
   {
     name: 'Blub',
     project: 'Blub',
-    quote:
-      'She is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clean code.',
+    quoteKey: 'testimonials.quotes.third',
     linkedinUrl: 'Blub',
   },
 ];

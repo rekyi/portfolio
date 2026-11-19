@@ -1,10 +1,11 @@
 import { Component, computed, signal } from '@angular/core';
 import { SectionTitle } from '../../../../shared/components/section-title/section-title';
+import { StableText } from '../../../../shared/components/stable-text/stable-text';
 import { ProjectCard } from './project-card/project-card';
 import { PROJECTS } from './projects.data';
 
 @Component({
-  imports: [SectionTitle, ProjectCard],
+  imports: [SectionTitle, StableText, ProjectCard],
   selector: 'app-projects',
   styleUrl: './projects.scss',
   templateUrl: './projects.html',

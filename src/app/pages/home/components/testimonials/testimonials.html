@@ -1,7 +1,10 @@
 <section id="testimonials" class="content">
   <h2 class="title">
-    Need a teamplayer?
-    <span class="subtitle">Here's what my colleagues say about me</span>
+    <app-stable-text [key]="['testimonials.title', 'testimonials.subtitle']">
+      <ng-template let-texts="texts">
+        {{ texts[0] }} <span class="subtitle">{{ texts[1] }}</span>
+      </ng-template>
+    </app-stable-text>
   </h2>
 
   <div class="cards">

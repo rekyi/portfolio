@@ -1,0 +1,126 @@
+{
+  "common": {
+    "home": "Home",
+    "backHome": "Back to home page",
+    "letsTalk": "Let's talk"
+  },
+  "nav": {
+    "ariaLabel": "Main",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "about": "Why me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "language": "Language",
+    "languageDe": "German",
+    "languageEn": "English"
+  },
+  "footer": {
+    "legal": "Legal",
+    "legalNotice": "Legal notice",
+    "privacyPolicy": "Privacy policy"
+  },
+  "social": {
+    "email": "Email",
+    "github": "GitHub"
+  },
+  "hero": {
+    "portraitAlt": "Portrait of Blub",
+    "jobTitle": "Fullstack Developer",
+    "scrollDown": "Scroll to Why me"
+  },
+  "about": {
+    "title": "Why me",
+    "iAm": "I am",
+    "statements": {
+      "location": " located in Blub",
+      "remote": " open to work remote",
+      "relocate": " open to relocate"
+    },
+    "question": "Why are you passionate about coding?",
+    "text": "You can include some key traits like: analytical thinking, creativity, persistence and collaboration. A problem-solving mindset is always nice to have."
+  },
+  "skills": {
+    "title": "My Skills",
+    "learningTitleMobile": "What I am currently learning",
+    "learningTitleDesktop": "I am currently learning",
+    "learningText": "I am motivated to continually improve my skills, implement innovative solutions and stay abreast of new technologies."
+  },
+  "projects": {
+    "title": "My Projects",
+    "tab": "Project",
+    "technologies": "Technologies",
+    "previewAlt": "Preview of {{title}}",
+    "comingSoonPreview": "Coming soon...",
+    "aboutTitle": "About the project",
+    "workProcessTitle": "How I have organised my work",
+    "groupWorkTitle": "My group work experience",
+    "learningsTitle": "What I have learnt",
+    "liveTest": "Live Test",
+    "github": "GitHub",
+    "comingSoon": "Coming soon",
+    "hollowbloom": {
+      "title": "Hollowbloom",
+      "duration": "Duration: 3 weeks",
+      "about": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
+      "workProcess": "How do you keep your code clean and maintainable? Have you broken the project down into reusable modules or components? Focus on documentation, naming files, variables, classes and testing.",
+      "groupWork": "How many people were in the team and what was your role? Describe your tasks in 1-2 sentences, for example: login form, dashboard or chat functionality. What technologies did you use? It is nice to mention good teamwork and cooperation."
+    },
+    "sharkie": {
+      "title": "Blub",
+      "duration": "Duration: 5 weeks",
+      "about": "A simple Jump-and-Run game based on an object-oriented approach. Help Sharkie to find coins and poison bottles to fight against the killer whale.",
+      "workProcess": "How do you keep your code clean and maintainable? Have you broken the project down into reusable modules or components? Focus on documentation, naming files, variables, classes and testing.",
+      "learnings": "As someone who is always trying to learn new technologies, you may have enjoyed working on this project because it allowed you to delve deep into a particular technology. Give details, such as the name of the framework or language you mean."
+    },
+    "join": {
+      "title": "Blub",
+      "duration": "Duration: 2 months",
+      "about": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      "workProcess": "How do you keep your code clean and maintainable? Have you broken the project down into reusable modules or components? Focus on documentation, naming files, variables, classes and testing.",
+      "groupWork": "How many people were in the team and what was your role? Describe your tasks in 1-2 sentences, for example: login form, dashboard or chat functionality. What technologies did you use? It is nice to mention good teamwork and cooperation."
+    },
+    "ongoing": {
+      "title": "Ongoing Project",
+      "about": "What are you currently working on and what features are you implementing? What is the key to success in your projects? You can mention good planning, code quality and execution. Show a desire to learn new technologies and continually improve your skills."
+    }
+  },
+  "testimonials": {
+    "title": "Need a teamplayer?",
+    "subtitle": "Here's what my colleagues say about me",
+    "project": "Project",
+    "linkedin": "LinkedIn Profile",
+    "quotes": {
+      "first": "Claudia had to develop, format and deliver content in collaboration with the team members. She is a reliable and friendly person.",
+      "second": "Claudia is a reliable and friendly person. Works in a structured way and write a clear code. I recommend her as a colleague.",
+      "third": "She is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clean code."
+    }
+  },
+  "contact": {
+    "title": "Contact me",
+    "phone": "Tel: {{phone}}",
+    "email": "E-mail: {{email}}",
+    "intro": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
+    "introExample": "Example: Feel free to get in touch with job offers or opportunities such as: ...",
+    "formTitle": "Let us work together!",
+    "nameLabel": "Your name",
+    "namePlaceholder": "Your name",
+    "nameRequired": "Please enter your name.",
+    "emailLabel": "Your Email",
+    "emailPlaceholder": "Your Email",
+    "emailRequired": "Please enter your email.",
+    "emailInvalid": "Please enter a valid email address.",
+    "messageLabel": "Your Message",
+    "messagePlaceholder": "Your message",
+    "messageRequired": "Please enter a message.",
+    "privacyBefore": "I've read the",
+    "privacyLink": "privacy policy",
+    "privacyAfter": "and agree to the processing of my data as outlined.",
+    "privacyRequired": "Please accept the privacy policy.",
+    "send": "Send",
+    "sendSuccess": "Thank you! Your message has been sent.",
+    "sendError": "Sorry, your message could not be sent. Please try again later.",
+    "scrollTop": "Scroll to top"
+  }
+}

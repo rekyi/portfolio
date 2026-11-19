@@ -124,6 +124,7 @@ nav {
   padding: 0;
 
   list-style: none;
+  text-align: center;
 
   @include flex(column, center, center, clamp(1.5rem, 9.2vw, 2.25rem));
 

@@ -1,107 +1,211 @@
 <section class="content legal-page">
-  <a class="back-link" routerLink="/" aria-label="Zurück zur Startseite">
+  <a class="back-link" routerLink="/" [attr.aria-label]="'common.backHome' | translate">
     <img src="/icons/mobile_arrow_back.svg" alt="" width="34" height="16" />
   </a>
 
-  <h1>Rechtliche Hinweise</h1>
-
-  <section>
-    <h2>Impressum</h2>
-    <address>
-      [Vorname Nachname]<br />
-      [Straße Hausnummer]<br />
-      [PLZ Ort]
-    </address>
+  @if (currentLang() === 'de') {
+    <h1>Rechtliche Hinweise</h1>
 
     <section>
-      <h3>Kontakt</h3>
-      <p>E-Mail: <a href="mailto:mail@rekyi.de">mail&#64;rekyi.de</a></p>
-      <p>
-        Quelle:
-        <a
-          href="https://www.e-recht24.de/impressum-generator.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          >https://www.e-recht24.de/impressum-generator.html</a
-        >
-      </p>
+      <h2>Impressum</h2>
+      <address>
+        [Vorname Nachname]<br />
+        [Straße Hausnummer]<br />
+        [PLZ Ort]
+      </address>
+
+      <section>
+        <h3>Kontakt</h3>
+        <p>E-Mail: <a href="mailto:mail@rekyi.de">mail&#64;rekyi.de</a></p>
+        <p>
+          Quelle:
+          <a
+            href="https://www.e-recht24.de/impressum-generator.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >https://www.e-recht24.de/impressum-generator.html</a
+          >
+        </p>
+      </section>
+
+      <section>
+        <h3>Nutzung dieser Website</h3>
+        <p>
+          Mit dem Besuch und der Nutzung von <a routerLink="/">rekyi.de</a> erklären Sie sich mit
+          den folgenden Hinweisen einverstanden. Ich kann diese Hinweise jederzeit ohne vorherige
+          Ankündigung anpassen. Es gilt die jeweils hier veröffentlichte Fassung.
+        </p>
+      </section>
+
+      <section>
+        <h3>Zweck und Design</h3>
+        <p>
+          <a routerLink="/">rekyi.de</a> ist mein persönliches Portfolio. Es entstand im Rahmen
+          einer Weiterbildung zum Frontend-Entwickler bei der
+          <a href="https://developerakademie.com" target="_blank" rel="noopener noreferrer"
+            >Developer Akademie GmbH</a
+          >
+          und stellt meine Projekte und Fähigkeiten vor. Die Website ist kein kommerzielles
+          Angebot. Ich bemühe mich um korrekte und aktuelle Inhalte, kann aber keine Gewähr für
+          ständige Verfügbarkeit, Vollständigkeit oder Richtigkeit übernehmen.
+        </p>
+        <p>
+          Das Design dieser Website basiert auf einer Vorlage der
+          <a href="https://developerakademie.com" target="_blank" rel="noopener noreferrer"
+            >Developer Akademie GmbH</a
+          >, die die Rechte daran hält. Die unbefugte Verwendung, Vervielfältigung, Veränderung
+          oder Verbreitung des Designs ist nicht gestattet.
+        </p>
+      </section>
+
+      <section>
+        <h3>Urheberrecht</h3>
+        <p>
+          Abgesehen vom Design der
+          <a href="https://developerakademie.com" target="_blank" rel="noopener noreferrer"
+            >Developer Akademie GmbH</a
+          >
+          liegen alle Rechte an den Inhalten dieser Website bei mir, soweit nicht anders
+          gekennzeichnet. Das gilt insbesondere für Texte, Quellcode, Bilder und
+          Projektbeschreibungen. Jede Verwendung außerhalb der Grenzen des Urheberrechts bedarf
+          meiner vorherigen schriftlichen Zustimmung.
+        </p>
+      </section>
+
+      <section>
+        <h3>Nutzung des Kontaktformulars</h3>
+        <p>
+          Bitte nutzen Sie diese Website, insbesondere das Kontaktformular, nur für rechtmäßige
+          Zwecke. Missbrauch wie das Versenden von Spam, Belästigungen oder Drohungen ist
+          untersagt.
+        </p>
+      </section>
+
+      <section>
+        <h3>Externe Links</h3>
+        <p>
+          Diese Website enthält Links zu externen Websites, etwa GitHub und LinkedIn. Auf deren
+          Inhalte habe ich keinen Einfluss, verantwortlich ist stets der jeweilige Anbieter. Zum
+          Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Werden mir
+          Rechtsverletzungen bekannt, entferne ich den betreffenden Link umgehend.
+        </p>
+      </section>
+
+      <section>
+        <h3>Haftung</h3>
+        <p>
+          Die Inhalte dieser Website werden ohne Gewähr bereitgestellt. Soweit gesetzlich
+          zulässig, hafte ich nicht für Schäden, die aus der Nutzung oder Nichtverfügbarkeit dieser
+          Website entstehen, es sei denn, sie beruhen auf Vorsatz oder grober Fahrlässigkeit. Die
+          Haftung für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit bleibt
+          unberührt.
+        </p>
+        <p>
+          Bei Fragen oder Hinweisen erreichen Sie mich unter
+          <a href="mailto:mail@rekyi.de">mail&#64;rekyi.de</a>.
+        </p>
+        <p>Stand: November 2026</p>
+      </section>
     </section>
+  } @else {
+    <h1>Legal Notice</h1>
 
     <section>
-      <h3>Nutzung dieser Website</h3>
-      <p>
-        Mit dem Besuch und der Nutzung von <a routerLink="/">rekyi.de</a> erklären Sie sich mit den
-        folgenden Hinweisen einverstanden. Ich kann diese Hinweise jederzeit ohne vorherige
-        Ankündigung anpassen. Es gilt die jeweils hier veröffentlichte Fassung.
-      </p>
-    </section>
+      <h2>Imprint</h2>
+      <address>
+        [First name Last name]<br />
+        [Street House number]<br />
+        [Postcode City]
+      </address>
 
-    <section>
-      <h3>Zweck und Design</h3>
-      <p>
-        <a routerLink="/">rekyi.de</a> ist mein persönliches Portfolio. Es entstand im Rahmen einer
-        Weiterbildung zum Frontend-Entwickler bei der
-        <a href="https://developerakademie.com" target="_blank" rel="noopener noreferrer"
-          >Developer Akademie GmbH</a
-        >
-        und stellt meine Projekte und Fähigkeiten vor. Die Website ist kein kommerzielles Angebot.
-        Ich bemühe mich um korrekte und aktuelle Inhalte, kann aber keine Gewähr für ständige
-        Verfügbarkeit, Vollständigkeit oder Richtigkeit übernehmen.
-      </p>
-      <p>
-        Das Design dieser Website basiert auf einer Vorlage der
-        <a href="https://developerakademie.com" target="_blank" rel="noopener noreferrer"
-          >Developer Akademie GmbH</a
-        >, die die Rechte daran hält. Die unbefugte Verwendung, Vervielfältigung, Veränderung oder
-        Verbreitung des Designs ist nicht gestattet.
-      </p>
-    </section>
+      <section>
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:mail@rekyi.de">mail&#64;rekyi.de</a></p>
+        <p>
+          Source:
+          <a
+            href="https://www.e-recht24.de/impressum-generator.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >https://www.e-recht24.de/impressum-generator.html</a
+          >
+        </p>
+      </section>
 
-    <section>
-      <h3>Urheberrecht</h3>
-      <p>
-        Abgesehen vom Design der
-        <a href="https://developerakademie.com" target="_blank" rel="noopener noreferrer"
-          >Developer Akademie GmbH</a
-        >
-        liegen alle Rechte an den Inhalten dieser Website bei mir, soweit nicht anders
-        gekennzeichnet. Das gilt insbesondere für Texte, Quellcode, Bilder und Projektbeschreibungen.
-        Jede Verwendung außerhalb der Grenzen des Urheberrechts bedarf meiner vorherigen
-        schriftlichen Zustimmung.
-      </p>
-    </section>
+      <section>
+        <h3>Acceptance of terms</h3>
+        <p>
+          By visiting and using <a routerLink="/">rekyi.de</a>, you agree to the following terms.
+          I may change these terms at any time without prior notice. The version published here
+          applies.
+        </p>
+      </section>
 
-    <section>
-      <h3>Nutzung des Kontaktformulars</h3>
-      <p>
-        Bitte nutzen Sie diese Website, insbesondere das Kontaktformular, nur für rechtmäßige Zwecke.
-        Missbrauch wie das Versenden von Spam, Belästigungen oder Drohungen ist untersagt.
-      </p>
-    </section>
+      <section>
+        <h3>Scope and ownership</h3>
+        <p>
+          <a routerLink="/">rekyi.de</a> is my personal portfolio. It was created as part of a
+          frontend developer training at
+          <a href="https://developerakademie.com" target="_blank" rel="noopener noreferrer"
+            >Developer Akademie GmbH</a
+          >
+          and presents my projects and skills. It is not a commercial service. I aim to keep the
+          content accurate and up to date, but I cannot guarantee constant availability,
+          completeness or accuracy.
+        </p>
+        <p>
+          The design of this website is based on a template owned by
+          <a href="https://developerakademie.com" target="_blank" rel="noopener noreferrer"
+            >Developer Akademie GmbH</a
+          >. Unauthorized use, reproduction, modification or distribution of the design is
+          prohibited.
+        </p>
+      </section>
 
-    <section>
-      <h3>Externe Links</h3>
-      <p>
-        Diese Website enthält Links zu externen Websites, etwa GitHub und LinkedIn. Auf deren Inhalte
-        habe ich keinen Einfluss, verantwortlich ist stets der jeweilige Anbieter. Zum Zeitpunkt der
-        Verlinkung waren keine Rechtsverstöße erkennbar. Werden mir Rechtsverletzungen bekannt,
-        entferne ich den betreffenden Link umgehend.
-      </p>
-    </section>
+      <section>
+        <h3>Proprietary rights</h3>
+        <p>
+          Apart from the design owned by
+          <a href="https://developerakademie.com" target="_blank" rel="noopener noreferrer"
+            >Developer Akademie GmbH</a
+          >, I retain all rights to the content of this website unless stated otherwise. This
+          applies in particular to texts, source code, images and project descriptions. Any use
+          beyond the limits of copyright law requires my prior written consent.
+        </p>
+      </section>
 
-    <section>
-      <h3>Haftung</h3>
-      <p>
-        Die Inhalte dieser Website werden ohne Gewähr bereitgestellt. Soweit gesetzlich zulässig,
-        hafte ich nicht für Schäden, die aus der Nutzung oder Nichtverfügbarkeit dieser Website
-        entstehen, es sei denn, sie beruhen auf Vorsatz oder grober Fahrlässigkeit. Die Haftung für
-        Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit bleibt unberührt.
-      </p>
-      <p>
-        Bei Fragen oder Hinweisen erreichen Sie mich unter
-        <a href="mailto:mail@rekyi.de">mail&#64;rekyi.de</a>.
-      </p>
-      <p>Stand: November 2026</p>
+      <section>
+        <h3>Use of the contact form</h3>
+        <p>
+          Please use this website, especially the contact form, for lawful purposes only. Misuse
+          such as sending spam, harassing or threatening messages is prohibited.
+        </p>
+      </section>
+
+      <section>
+        <h3>External links</h3>
+        <p>
+          This website links to external websites such as GitHub and LinkedIn. I have no control
+          over their content, the respective provider is always responsible. No legal violations
+          were apparent at the time of linking. If I become aware of any, I will remove the link
+          immediately.
+        </p>
+      </section>
+
+      <section>
+        <h3>Limitation of liability</h3>
+        <p>
+          The content of this website is provided "as is". To the extent permitted by law, I am
+          not liable for damages arising from the use or unavailability of this website, unless
+          they are caused by intent or gross negligence. Liability for injury to life, body or
+          health remains unaffected.
+        </p>
+        <p>
+          For any questions or notices, please contact me at
+          <a href="mailto:mail@rekyi.de">mail&#64;rekyi.de</a>.
+        </p>
+        <p>Date: November 2026</p>
+      </section>
     </section>
-  </section>
+  }
 </section>

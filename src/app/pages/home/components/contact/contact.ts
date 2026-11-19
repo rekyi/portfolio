@@ -1,13 +1,22 @@
 import { Component, inject, signal } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 import { ContactService } from '../../../../core/services/contact';
 import { PrimaryButton } from '../../../../shared/components/primary-button/primary-button';
 import { SectionTitle } from '../../../../shared/components/section-title/section-title';
+import { StableText } from '../../../../shared/components/stable-text/stable-text';
 import { ContactRequest, SendStatus } from '../../../../shared/models/contact.model';
 
 @Component({
-  imports: [RouterLink, ReactiveFormsModule, PrimaryButton, SectionTitle],
+  imports: [
+    RouterLink,
+    ReactiveFormsModule,
+    TranslatePipe,
+    PrimaryButton,
+    SectionTitle,
+    StableText,
+  ],
   selector: 'app-contact',
   styleUrl: './contact.scss',
   templateUrl: './contact.html',

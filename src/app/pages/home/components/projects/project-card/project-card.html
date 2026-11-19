@@ -1,8 +1,8 @@
 <article class="project-card">
   <div class="meta">
-    <h3 class="title">{{ project().title }}</h3>
+    <h3 class="title"><app-stable-text [key]="project().titleKey" /></h3>
     <div class="technologies">
-      <span class="technologies-label">Technologies</span>
+      <span class="technologies-label"><app-stable-text key="projects.technologies" /></span>
       <ul class="technology-list">
         @for (technology of project().technologies; track technology.name) {
           <li class="technology">
@@ -20,8 +20,8 @@
         }
       </ul>
     </div>
-    @if (project().duration; as duration) {
-      <p class="duration">Duration: {{ duration }}</p>
+    @if (project().durationKey; as durationKey) {
+      <p class="duration"><app-stable-text [key]="durationKey" /></p>
     }
   </div>
 
@@ -29,42 +29,42 @@
     @if (project().image; as image) {
       <img
         [src]="image.src"
-        alt="Preview of {{ project().title }}"
+        [alt]="'projects.previewAlt' | translate: { title: (project().titleKey | translate) }"
         [width]="image.width"
         [height]="image.height"
         loading="lazy"
       />
     } @else {
-      <p class="coming-soon">Coming soon...</p>
+      <p class="coming-soon"><app-stable-text key="projects.comingSoonPreview" /></p>
     }
   </div>
 
   <div class="details">
     <div class="detail">
       <div class="detail-head">
-        <h4 class="detail-title">About the project</h4>
-        @if (project().duration; as duration) {
-          <p class="about-duration">Duration: {{ duration }}</p>
+        <h4 class="detail-title"><app-stable-text key="projects.aboutTitle" /></h4>
+        @if (project().durationKey; as durationKey) {
+          <p class="about-duration"><app-stable-text [key]="durationKey" /></p>
         }
       </div>
-      <p class="detail-text">{{ project().about }}</p>
+      <p class="detail-text"><app-stable-text [key]="project().aboutKey" /></p>
     </div>
-    @if (project().workProcess; as workProcess) {
+    @if (project().workProcessKey; as workProcessKey) {
       <div class="detail">
-        <h4 class="detail-title">How I have organised my work</h4>
-        <p class="detail-text">{{ workProcess }}</p>
+        <h4 class="detail-title"><app-stable-text key="projects.workProcessTitle" /></h4>
+        <p class="detail-text"><app-stable-text [key]="workProcessKey" /></p>
       </div>
     }
-    @if (project().groupWork; as groupWork) {
+    @if (project().groupWorkKey; as groupWorkKey) {
       <div class="detail">
-        <h4 class="detail-title">My group work experience</h4>
-        <p class="detail-text">{{ groupWork }}</p>
+        <h4 class="detail-title"><app-stable-text key="projects.groupWorkTitle" /></h4>
+        <p class="detail-text"><app-stable-text [key]="groupWorkKey" /></p>
       </div>
     }
-    @if (project().learnings; as learnings) {
+    @if (project().learningsKey; as learningsKey) {
       <div class="detail">
-        <h4 class="detail-title">What I have learnt</h4>
-        <p class="detail-text">{{ learnings }}</p>
+        <h4 class="detail-title"><app-stable-text key="projects.learningsTitle" /></h4>
+        <p class="detail-text"><app-stable-text [key]="learningsKey" /></p>
       </div>
     }
   </div>
@@ -78,7 +78,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        Live Test
+        <app-stable-text key="projects.liveTest" />
       </a>
     }
     @if (project().githubUrl; as githubUrl) {
@@ -90,12 +90,12 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        GitHub
+        <app-stable-text key="projects.github" />
       </a>
     }
     @if (!project().liveUrl && !project().githubUrl) {
       <button appPrimaryButton variant="secondary" class="card-btn" type="button" disabled>
-        Coming soon
+        <app-stable-text key="projects.comingSoon" />
       </button>
     }
   </div>

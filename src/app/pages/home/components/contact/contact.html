@@ -1,82 +1,83 @@
 <section id="contact" class="content">
-  <app-section-title>Contact me</app-section-title>
+  <app-section-title><app-stable-text key="contact.title" /></app-section-title>
 
   <div class="intro">
     <ul class="contact-links">
       <li>
-        <a class="contact-link phone-link" href="tel:+4915712345668">Tel: 0157 123 456 68</a>
+        <a class="contact-link phone-link" href="tel:+4915712345668">
+          <app-stable-text key="contact.phone" [params]="{ phone: '0157 123 456 68' }" />
+        </a>
       </li>
       <li>
         <a class="contact-link email-link" href="mailto:blub@example.com">
-          E-mail: blub&#64;example.com
+          <app-stable-text key="contact.email" [params]="{ email: 'blub&#64;example.com' }" />
         </a>
       </li>
     </ul>
 
     <p class="text">
-      Encourage people to contact you and describe what role you are interested in. Show that you
-      will add value to their projects through your work.
+      <app-stable-text key="contact.intro" />
       <br />
-      Example: Feel free to get in touch with job offers or opportunities such as: ...
+      <app-stable-text key="contact.introExample" />
     </p>
   </div>
 
-  <h3 class="form-title">Let us work together!</h3>
+  <h3 class="form-title"><app-stable-text key="contact.formTitle" /></h3>
 
   <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="handleSubmit()">
     <div class="field">
-      <label for="contact-name">Your name</label>
+      <label for="contact-name">{{ 'contact.nameLabel' | translate }}</label>
       <input
         id="contact-name"
         type="text"
         name="name"
         formControlName="name"
         autocomplete="name"
-        placeholder="Your name"
+        [placeholder]="'contact.namePlaceholder' | translate"
         aria-describedby="contact-name-error"
       />
       <p id="contact-name-error" class="error-message">
         @if (contactForm.controls.name.touched && contactForm.controls.name.invalid) {
-          Please enter your name.
+          {{ 'contact.nameRequired' | translate }}
         }
       </p>
     </div>
 
     <div class="field">
-      <label for="contact-email">Your Email</label>
+      <label for="contact-email">{{ 'contact.emailLabel' | translate }}</label>
       <input
         id="contact-email"
         type="email"
         name="email"
         formControlName="email"
         autocomplete="email"
-        placeholder="Your Email"
+        [placeholder]="'contact.emailPlaceholder' | translate"
         aria-describedby="contact-email-error"
       />
       <p id="contact-email-error" class="error-message">
         @if (contactForm.controls.email.touched && contactForm.controls.email.invalid) {
           @if (contactForm.controls.email.hasError('required')) {
-            Please enter your email.
+            {{ 'contact.emailRequired' | translate }}
           } @else {
-            Please enter a valid email address.
+            {{ 'contact.emailInvalid' | translate }}
           }
         }
       </p>
     </div>
 
     <div class="field message">
-      <label for="contact-message">Your Message</label>
+      <label for="contact-message">{{ 'contact.messageLabel' | translate }}</label>
       <textarea
         id="contact-message"
         name="message"
         formControlName="message"
         autocomplete="off"
-        placeholder="Your message"
+        [placeholder]="'contact.messagePlaceholder' | translate"
         aria-describedby="contact-message-error"
       ></textarea>
       <p id="contact-message-error" class="error-message">
         @if (contactForm.controls.message.touched && contactForm.controls.message.invalid) {
-          Please enter a message.
+          {{ 'contact.messageRequired' | translate }}
         }
       </p>
     </div>
@@ -103,12 +104,15 @@
         aria-describedby="contact-privacy-error"
       />
       <label for="contact-privacy">
-        I've read the <a routerLink="/privacy-policy">privacy policy</a> and agree to the
-        processing of my data as outlined.
+        <app-stable-text [key]="['contact.privacyBefore', 'contact.privacyLink', 'contact.privacyAfter']">
+          <ng-template let-texts="texts">
+            {{ texts[0] }} <a routerLink="/privacy-policy">{{ texts[1] }}</a> {{ texts[2] }}
+          </ng-template>
+        </app-stable-text>
       </label>
       <p id="contact-privacy-error" class="error-message">
         @if (contactForm.controls.privacy.dirty && contactForm.controls.privacy.invalid) {
-          Please accept the privacy policy.
+          {{ 'contact.privacyRequired' | translate }}
         }
       </p>
     </div>
@@ -120,22 +124,27 @@
       class="send-btn"
       [disabled]="contactForm.invalid || isSending()"
     >
-      Send
+      <app-stable-text key="contact.send" />
     </button>
 
     <p class="send-feedback" [class.is-error]="sendStatus() === 'error'" role="status">
       @switch (sendStatus()) {
         @case ('success') {
-          Thank you! Your message has been sent.
+          {{ 'contact.sendSuccess' | translate }}
         }
         @case ('error') {
-          Sorry, your message could not be sent. Please try again later.
+          {{ 'contact.sendError' | translate }}
         }
       }
     </p>
   </form>
 
-  <button class="scroll-top" type="button" aria-label="Scroll to top" (click)="scrollToTop()">
+  <button
+    class="scroll-top"
+    type="button"
+    [attr.aria-label]="'contact.scrollTop' | translate"
+    (click)="scrollToTop()"
+  >
     <img src="/icons/arrow_mob.svg" alt="" width="16" height="34" loading="lazy" />
   </button>
 </section>
