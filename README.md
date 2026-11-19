@@ -10,13 +10,13 @@
 ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat-square&logo=sass&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-8-777BB4?style=flat-square&logo=php&logoColor=white)
 
-[Live site](https://rekyi.de) · [Features](#features) · [Getting started](#getting-started) · [Deployment](#deployment)
+[Live site](https://rekyi.de) · [Features](#features) · [Tech stack](#tech-stack) · [Getting started](#getting-started)
 
 </div>
 
 ---
 
-![Portfolio hero section](docs/readme.webp)
+<!-- ![Portfolio hero section](docs/readme.webp) -->
 
 ## About
 
@@ -67,16 +67,11 @@ public/
 ├── mail-config.example.php # Template for the private mail config
 ├── maintenance.html
 └── .htaccess
+docs/
+└── DEPLOYMENT.md           # Hosting, contact form and maintenance mode
 ```
 
 ## Getting started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (current LTS) and npm
-- [Angular CLI](https://angular.dev/tools/cli) (optional, `npx ng` works as well)
-
-### Installation
 
 ```bash
 git clone https://github.com/rekyi/portfolio.git
@@ -85,22 +80,7 @@ npm install
 npm start
 ```
 
-The app opens at `http://localhost:4200` (Angular's default port). If you run it on a different port, add that origin to `allowedOrigins` in `mail-config.php`, otherwise the contact form will be blocked.
-
-### Contact form
-
-The form sends its data to `send-mail.php`, which needs a PHP-enabled web server.
-
-1. Copy `public/mail-config.example.php` to `public/mail-config.php`.
-2. Fill in your values:
-   - `sender` – an address on your own domain
-   - `recipient` – the inbox that receives the messages
-   - `allowedOrigins` – the domains allowed to call the script, including `http://localhost:4200` for local testing
-3. Set `MAIL_ENDPOINT` in `src/app/core/services/contact.ts` to the URL of your script.
-
-`mail-config.php` is listed in `.gitignore` and never leaves your machine or server.
-
-## Scripts
+The app opens at `http://localhost:4200`.
 
 | Command         | Description                                            |
 | --------------- | ------------------------------------------------------ |
@@ -108,21 +88,11 @@ The form sends its data to `send-mail.php`, which needs a PHP-enabled web server
 | `npm run build` | Creates a production build in `dist/portfolio/browser` |
 | `npm run watch` | Rebuilds on every change (development configuration)   |
 
-## Deployment
-
-1. Run `npm run build`.
-2. Upload the **contents** of `dist/portfolio/browser/` to the web root of an Apache server (for example `public_html`).
-3. Make sure `mail-config.php` is on the server as well.
-
-The included `.htaccess` serves existing files directly and routes everything else to `index.html`, so routes like `/legal-notice` also work after a reload. Requests to subdomains are left untouched, which allows hosting other projects on subdomains of the same account.
-
-### Maintenance mode
-
-Create an empty file named `maintenance.on` in the web root to show `maintenance.html` to all visitors (HTTP 503). Delete the file to bring the portfolio back. The switch file is ignored by Git, so a deployment can never turn maintenance mode on by accident.
+Hosting, the contact form setup and the maintenance mode are documented in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
 ## Credits
 
-A learning project at heart: built to bring my work together in one place and to get hands-on with modern Angular – signals, standalone components and the built-in control flow. The design is based on a template owned by Developer Akademie GmbH.
+Built to bring my work together in one place and to get hands-on with modern Angular – signals, standalone components and the built-in control flow. The design is based on a template owned by Developer Akademie GmbH.
 
 ## Contact
 
