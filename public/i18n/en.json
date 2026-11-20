@@ -38,14 +38,14 @@
       "remote": " open to work remote",
       "relocate": " open to relocate"
     },
-    "question": "Why are you passionate about coding?",
-    "text": "You can include some key traits like: analytical thinking, creativity, persistence and collaboration. A problem-solving mindset is always nice to have."
+    "question": "I enjoy turning an idea into something people can click, play and use.",
+    "text": "I solve problems step by step and keep going until it works. Details matter to me, from clean code to accessible interfaces, and I enjoy working in a team where we learn from each other."
   },
   "skills": {
     "title": "My Skills",
     "learningTitleMobile": "What I am currently learning",
     "learningTitleDesktop": "I am currently learning",
-    "learningText": "I am motivated to continually improve my skills, implement innovative solutions and stay abreast of new technologies."
+    "learningText": "I learn something new every day, try out new technologies in small projects and want to keep improving my code."
   },
   "projects": {
     "title": "My Projects",
@@ -64,16 +64,16 @@
     "hollowbloom": {
       "title": "Hollowbloom",
       "duration": "Duration: 3 weeks",
-      "about": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
-      "workProcess": "How do you keep your code clean and maintainable? Have you broken the project down into reusable modules or components? Focus on documentation, naming files, variables, classes and testing.",
-      "groupWork": "How many people were in the team and what was your role? Describe your tasks in 1-2 sentences, for example: login form, dashboard or chat functionality. What technologies did you use? It is nice to mention good teamwork and cooperation."
+      "about": "A 2D action platformer for the browser, built in plain JavaScript on an HTML5 canvas. The path leads through a mossy forest full of boars, dark elves and skeletons. At the end, the boss Verdan waits with two phases.",
+      "workProcess": "I split the game into small classes: world, characters, enemies, boss and items. Shared values such as timings, hitboxes and key bindings live in one file, and all texts in a translation file. That way, the game can be extended without touching the logic.",
+      "learnings": "I learnt a lot about object-oriented JavaScript, a fixed-timestep game loop and level design with LDtk. Small details like hit-stop, screen shake and a smooth camera showed me how much polish shapes the feel of a game."
     },
     "pokedex": {
       "title": "Pokédex",
-      "duration": "Duration: 5 weeks",
-      "about": "A simple Jump-and-Run game based on an object-oriented approach. Help Sharkie to find coins and poison bottles to fight against the killer whale.",
-      "workProcess": "How do you keep your code clean and maintainable? Have you broken the project down into reusable modules or components? Focus on documentation, naming files, variables, classes and testing.",
-      "learnings": "As someone who is always trying to learn new technologies, you may have enjoyed working on this project because it allowed you to delve deep into a particular technology. Give details, such as the name of the framework or language you mean."
+      "duration": "Duration: 2 weeks",
+      "about": "A Pokédex that shows every Pokémon as a trading card, loaded live from the PokéAPI. New cards appear as you scroll, the search suggests names, and a click opens a holographic detail view with types, evolution stage and attacks.",
+      "workProcess": "The project is split into small modules for data, grid, search, dialog and templates, and each file has one job. Functions stay short, names say what they do, and all API requests and data mapping sit in one place.",
+      "learnings": "With plain JavaScript and no framework, I practised asynchronous code with async/await, working with a REST API and rendering dynamic content. Infinite scroll, a native dialog and keyboard navigation made me think about loading states, errors and accessibility."
     },
     "join": {
       "title": "Join",
@@ -84,7 +84,7 @@
     },
     "ongoing": {
       "title": "Ongoing Project",
-      "about": "What are you currently working on and what features are you implementing? What is the key to success in your projects? You can mention good planning, code quality and execution. Show a desire to learn new technologies and continually improve your skills."
+      "about": "My next project is already in progress. I plan features carefully, keep the code clean and readable, and try something new in every project. More will follow here soon."
     }
   },
   "testimonials": {
@@ -102,8 +102,8 @@
     "title": "Contact me",
     "phone": "Tel: {{phone}}",
     "email": "E-mail: {{email}}",
-    "intro": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
-    "introExample": "Example: Feel free to get in touch with job offers or opportunities such as: ...",
+    "intro": "I enjoy building things that work and are fun to use, and I like working in a team best. Clean code and good collaboration matter to me, and I’m always curious about new ideas.",
+    "introExample": "Feel free to get in touch about job offers, project enquiries or questions about my projects.",
     "formTitle": "Let us work together!",
     "nameLabel": "Your name",
     "namePlaceholder": "Your name",

@@ -38,14 +38,14 @@
       "remote": " remote verfügbar",
       "relocate": " umzugsbereit"
     },
-    "question": "Was begeistert Sie am Programmieren?",
-    "text": "Nennen Sie Kerneigenschaften wie analytisches Denken, Kreativität, Ausdauer und Teamarbeit. Lösungsorientiertes Denken ist immer ein Plus."
+    "question": "Ich liebe es, aus einer Idee etwas zu bauen, das man anklicken, spielen und benutzen kann.",
+    "text": "Ich löse Probleme Schritt für Schritt und bleibe dran, bis es läuft. Mir sind Details wichtig, vom sauberen Code bis zur barrierefreien Oberfläche, und ich arbeite gern in einem Team, in dem man voneinander lernt."
   },
   "skills": {
     "title": "Meine Skills",
     "learningTitleMobile": "Was ich gerade lerne",
     "learningTitleDesktop": "Ich lerne gerade",
-    "learningText": "Ich will mich stetig verbessern, innovative Lösungen umsetzen und neue Technologien verfolgen."
+    "learningText": "Ich lerne jeden Tag dazu, probiere neue Technologien in kleinen Projekten aus und will meinen Code stetig besser machen."
   },
   "projects": {
     "title": "Meine Projekte",
@@ -64,16 +64,16 @@
     "hollowbloom": {
       "title": "Hollowbloom",
       "duration": "Dauer: 3 Wochen",
-      "about": "Diese App ist ein Slack-Klon. Sie verbessert Kommunikation und Zusammenarbeit im Team durch eine intuitive Oberfläche, Echtzeit-Chats und klare Kanäle.",
-      "workProcess": "Wie halten Sie Ihren Code sauber und wartbar? Haben Sie das Projekt in wiederverwendbare Module oder Komponenten zerlegt? Gehen Sie auf Doku, Benennung und Tests ein.",
-      "groupWork": "Wie groß war das Team und welche Rolle hatten Sie? Beschreiben Sie Ihre Aufgaben in 1–2 Sätzen, z. B. Login, Dashboard oder Chat. Welche Technologien haben Sie genutzt? Gute Teamarbeit ist ein Pluspunkt."
+      "about": "Ein 2D-Action-Plattformer für den Browser, in reinem JavaScript auf dem HTML5-Canvas gebaut. Es geht durch einen moosigen Wald voller Wildschweine, Dunkelelfen und Skelette. Am Ende wartet der Boss Verdan mit zwei Kampfphasen.",
+      "workProcess": "Ich habe das Spiel in kleine Klassen aufgeteilt: Welt, Charaktere, Gegner, Boss und Items. Gemeinsame Werte wie Timings, Hitboxen und Tastenbelegung liegen zentral in einer Datei, alle Texte in einer Übersetzungsdatei. So lässt sich das Spiel erweitern, ohne die Logik anzufassen.",
+      "learnings": "Ich habe einiges über objektorientiertes JavaScript, Game-Loop mit festem Zeitschritt und Leveldesign mit LDtk gelernt. Kleine Details wie Hit-Stop, Screen Shake und eine weiche Kamera haben mir gezeigt, wie viel Feinschliff das Spielgefühl ausmacht."
     },
     "pokedex": {
       "title": "Pokédex",
-      "duration": "Dauer: 5 Wochen",
-      "about": "Ein einfaches Jump-and-Run-Spiel mit objektorientiertem Ansatz. Helfen Sie Sharkie, Münzen und Giftflaschen gegen den Killerwal zu sammeln.",
-      "workProcess": "Wie halten Sie Ihren Code sauber und wartbar? Haben Sie das Projekt in wiederverwendbare Module oder Komponenten zerlegt? Gehen Sie auf Doku, Benennung und Tests ein.",
-      "learnings": "Da Sie ständig neue Technologien lernen, hat Ihnen dieses Projekt vielleicht gefallen, weil Sie tief in eine Technologie eintauchen konnten. Nennen Sie Details, etwa das Framework oder die Sprache."
+      "duration": "Dauer: 2 Wochen",
+      "about": "Ein Pokédex, der jedes Pokémon als Sammelkarte zeigt und live aus der PokéAPI lädt. Beim Scrollen kommen automatisch neue Karten dazu, die Suche schlägt Namen vor, und ein Klick öffnet eine holografische Detailansicht mit Typen, Entwicklungsstufe und Attacken.",
+      "workProcess": "Das Projekt ist in kleine Module für Daten, Grid, Suche, Detailansicht und Templates gegliedert, jede Datei hat eine klare Aufgabe. Funktionen bleiben kurz, Namen sagen, was sie tun, und alle API-Anfragen samt Aufbereitung der Daten liegen an einer Stelle.",
+      "learnings": "Mit reinem JavaScript ohne Framework habe ich asynchronen Code mit async/await, den Umgang mit einer REST-API und das dynamische Rendern von Inhalten geübt. Endlos-Scroll, ein natives Dialog-Element und Tastaturbedienung haben mich dazu gebracht, Ladezustände, Fehlerfälle und Barrierefreiheit mitzudenken."
     },
     "join": {
       "title": "Join",
@@ -84,7 +84,7 @@
     },
     "ongoing": {
       "title": "Projekt in Arbeit",
-      "about": "Woran arbeiten Sie gerade, welche Funktionen setzen Sie um? Was ist Ihr Erfolgsrezept? Nennen Sie gute Planung, Codequalität und Umsetzung. Zeigen Sie, dass Sie Neues lernen und sich stetig verbessern wollen."
+      "about": "Mein nächstes Projekt ist bereits in Arbeit. Ich plane Features sorgfältig, halte den Code sauber und lesbar und probiere in jedem Projekt etwas Neues aus. Mehr dazu folgt hier in Kürze."
     }
   },
   "testimonials": {
@@ -102,8 +102,8 @@
     "title": "Kontakt",
     "phone": "Tel.: {{phone}}",
     "email": "E-Mail: {{email}}",
-    "intro": "Ermutigen Sie zur Kontaktaufnahme und beschreiben Sie, welche Rolle Sie suchen. Zeigen Sie, welchen Mehrwert Ihre Arbeit bietet.",
-    "introExample": "Beispiel: Schreiben Sie mir gern zu Jobangeboten oder Chancen wie: ...",
+    "intro": "Ich baue gern Dinge, die funktionieren und Spaß machen, und arbeite am liebsten im Team. Mir sind sauberer Code und gute Zusammenarbeit wichtig, und ich bin immer neugierig auf neue Ideen.",
+    "introExample": "Schreiben Sie mir gern bei Jobangeboten, Projektanfragen oder Fragen zu meinen Projekten.",
     "formTitle": "Arbeiten wir zusammen!",
     "nameLabel": "Ihr Name",
     "namePlaceholder": "Ihr Name",

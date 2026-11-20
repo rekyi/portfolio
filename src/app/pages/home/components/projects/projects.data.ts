@@ -15,7 +15,7 @@ export const PROJECTS: Project[] = [
     technologies: PLACEHOLDER_TECHNOLOGIES,
     aboutKey: 'projects.hollowbloom.about',
     workProcessKey: 'projects.hollowbloom.workProcess',
-    groupWorkKey: 'projects.hollowbloom.groupWork',
+    learningsKey: 'projects.hollowbloom.learnings',
     images: [
       '/images/projects/projects_hollowbloom_1.webp',
       '/images/projects/projects_hollowbloom_2.webp',
