@@ -216,9 +216,11 @@ h1 {
   }
 }
 
-.scroll-down img {
+.scroll-down svg {
   width: auto;
   height: 3rem;
+
+  color: var(--primary-clr);
 
   rotate: 180deg;
 }

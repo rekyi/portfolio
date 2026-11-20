@@ -1,13 +1,15 @@
 <section class="content legal-page">
   <a class="back-link" routerLink="/" [attr.aria-label]="'common.backHome' | translate">
-    <img src="/icons/mobile_arrow_back.svg" alt="" width="34" height="16" />
+    <svg viewBox="0 0 34 16" width="34" height="16" aria-hidden="true">
+      <use href="/icons/mobile_arrow_back.svg#icon" />
+    </svg>
   </a>
 
   @if (currentLang() === 'de') {
-    <h1>Rechtliche Hinweise</h1>
+    <h1>Impressum</h1>
 
     <section>
-      <h2>Impressum</h2>
+      <h2>Angaben gemäß § 5 DDG</h2>
       <address>
         [Vorname Nachname]<br />
         [Straße Hausnummer]<br />
@@ -17,23 +19,14 @@
       <section>
         <h3>Kontakt</h3>
         <p>E-Mail: <a href="mailto:mail@rekyi.de">mail&#64;rekyi.de</a></p>
-        <p>
-          Quelle:
-          <a
-            href="https://www.e-recht24.de/impressum-generator.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://www.e-recht24.de/impressum-generator.html</a
-          >
-        </p>
       </section>
 
       <section>
         <h3>Nutzung dieser Website</h3>
         <p>
-          Mit dem Besuch und der Nutzung von <a routerLink="/">rekyi.de</a> erklären Sie sich mit
-          den folgenden Hinweisen einverstanden. Ich kann diese Hinweise jederzeit ohne vorherige
-          Ankündigung anpassen. Es gilt die jeweils hier veröffentlichte Fassung.
+          Für die Nutzung von <a routerLink="/">rekyi.de</a> gelten die folgenden Hinweise. Ich kann
+          diese Hinweise jederzeit ohne vorherige Ankündigung anpassen. Es gilt die jeweils hier
+          veröffentlichte Fassung.
         </p>
       </section>
 
@@ -100,13 +93,22 @@
           <a href="mailto:mail@rekyi.de">mail&#64;rekyi.de</a>.
         </p>
         <p>Stand: November 2026</p>
+        <p>
+          Quelle:
+          <a
+            href="https://www.e-recht24.de/impressum-generator.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >https://www.e-recht24.de/impressum-generator.html</a
+          >
+        </p>
       </section>
     </section>
   } @else {
     <h1>Legal Notice</h1>
 
     <section>
-      <h2>Imprint</h2>
+      <h2>Information pursuant to Section 5 DDG</h2>
       <address>
         [First name Last name]<br />
         [Street House number]<br />
@@ -116,23 +118,13 @@
       <section>
         <h3>Contact</h3>
         <p>Email: <a href="mailto:mail@rekyi.de">mail&#64;rekyi.de</a></p>
-        <p>
-          Source:
-          <a
-            href="https://www.e-recht24.de/impressum-generator.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://www.e-recht24.de/impressum-generator.html</a
-          >
-        </p>
       </section>
 
       <section>
-        <h3>Acceptance of terms</h3>
+        <h3>Use of this website</h3>
         <p>
-          By visiting and using <a routerLink="/">rekyi.de</a>, you agree to the following terms. I
-          may change these terms at any time without prior notice. The version published here
-          applies.
+          The following terms apply to the use of <a routerLink="/">rekyi.de</a>. I may change these
+          terms at any time without prior notice. The version published here applies.
         </p>
       </section>
 
@@ -195,7 +187,16 @@
           For any questions or notices, please contact me at
           <a href="mailto:mail@rekyi.de">mail&#64;rekyi.de</a>.
         </p>
-        <p>Date: November 2026</p>
+        <p>Last updated: November 2026</p>
+        <p>
+          Source:
+          <a
+            href="https://www.e-recht24.de/impressum-generator.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >https://www.e-recht24.de/impressum-generator.html</a
+          >
+        </p>
       </section>
     </section>
   }

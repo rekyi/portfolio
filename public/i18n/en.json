@@ -2,13 +2,18 @@
   "common": {
     "home": "Home",
     "backHome": "Back to home page",
-    "letsTalk": "Let's talk"
+    "letsTalk": "Let's Talk"
+  },
+  "pageTitle": {
+    "home": "Home",
+    "legalNotice": "Legal Notice",
+    "privacyPolicy": "Privacy Policy"
   },
   "nav": {
     "ariaLabel": "Main",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "about": "Why me",
+    "about": "Why Me",
     "skills": "Skills",
     "projects": "Projects",
     "contact": "Contact",
@@ -18,8 +23,8 @@
   },
   "footer": {
     "legal": "Legal",
-    "legalNotice": "Legal notice",
-    "privacyPolicy": "Privacy policy"
+    "legalNotice": "Legal Notice",
+    "privacyPolicy": "Privacy Policy"
   },
   "social": {
     "email": "Email",
@@ -28,14 +33,14 @@
   "hero": {
     "portraitAlt": "Portrait of Blub",
     "jobTitle": "Fullstack Developer",
-    "scrollDown": "Scroll to Why me"
+    "scrollDown": "Scroll to Why Me"
   },
   "about": {
-    "title": "Why me",
+    "title": "Why Me",
     "iAm": "I am",
     "statements": {
       "location": " located in Blub",
-      "remote": " open to work remote",
+      "remote": " open to remote work",
       "relocate": " open to relocate"
     },
     "question": "I enjoy turning an idea into something people can click, play and use.",
@@ -53,27 +58,27 @@
     "technologies": "Technologies",
     "previewAlt": "Preview of {{title}}",
     "showImage": "Show image {{number}}",
-    "comingSoonPreview": "Coming soon...",
-    "aboutTitle": "About the project",
-    "workProcessTitle": "How I have organised my work",
-    "groupWorkTitle": "My group work experience",
-    "learningsTitle": "What I have learnt",
+    "comingSoonPreview": "Coming Soon...",
+    "aboutTitle": "About The Project",
+    "workProcessTitle": "How I Have Organized My Work",
+    "groupWorkTitle": "My Group Work Experience",
+    "learningsTitle": "What I Have Learned",
     "liveTest": "Live Test",
     "github": "GitHub",
-    "comingSoon": "Coming soon",
+    "comingSoon": "Coming Soon",
     "hollowbloom": {
       "title": "Hollowbloom",
       "duration": "Duration: 3 weeks",
       "about": "A 2D action platformer for the browser, built in plain JavaScript on an HTML5 canvas. The path leads through a mossy forest full of boars, dark elves and skeletons. At the end, the boss Verdan waits with two phases.",
       "workProcess": "I split the game into small classes: world, characters, enemies, boss and items. Shared values such as timings, hitboxes and key bindings live in one file, and all texts in a translation file. That way, the game can be extended without touching the logic.",
-      "learnings": "I learnt a lot about object-oriented JavaScript, a fixed-timestep game loop and level design with LDtk. Small details like hit-stop, screen shake and a smooth camera showed me how much polish shapes the feel of a game."
+      "learnings": "I learned a lot about object-oriented JavaScript, a fixed-timestep game loop and level design with LDtk. Small details like hit-stop, screen shake and a smooth camera showed me how much polish shapes the feel of a game."
     },
     "pokedex": {
       "title": "Pokédex",
       "duration": "Duration: 2 weeks",
       "about": "A Pokédex that shows every Pokémon as a trading card, loaded live from the PokéAPI. New cards appear as you scroll, the search suggests names, and a click opens a holographic detail view with types, evolution stage and attacks.",
       "workProcess": "The project is split into small modules for data, grid, search, dialog and templates, and each file has one job. Functions stay short, names say what they do, and all API requests and data mapping sit in one place.",
-      "learnings": "With plain JavaScript and no framework, I practised asynchronous code with async/await, working with a REST API and rendering dynamic content. Infinite scroll, a native dialog and keyboard navigation made me think about loading states, errors and accessibility."
+      "learnings": "With plain JavaScript and no framework, I practiced asynchronous code with async/await, working with a REST API and rendering dynamic content. Infinite scroll, a native dialog and keyboard navigation made me think about loading states, errors and accessibility."
     },
     "join": {
       "title": "Join",
@@ -88,31 +93,31 @@
     }
   },
   "testimonials": {
-    "title": "Need a teamplayer?",
-    "subtitle": "Here's what my colleagues say about me",
+    "title": "Need a Team Player?",
+    "subtitle": "Here's What My Colleagues Say About Me",
     "project": "Project",
     "linkedin": "LinkedIn Profile",
     "quotes": {
       "first": "Claudia had to develop, format and deliver content in collaboration with the team members. She is a reliable and friendly person.",
-      "second": "Claudia is a reliable and friendly person. Works in a structured way and write a clear code. I recommend her as a colleague.",
-      "third": "She is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clean code."
+      "second": "Claudia is a reliable and friendly person. Works in a structured way and writes clear code. I recommend her as a colleague.",
+      "third": "She is a trustworthy team player and can cope with the stress of deadlines. Structured work and clean code."
     }
   },
   "contact": {
-    "title": "Contact me",
-    "phone": "Tel: {{phone}}",
-    "email": "E-mail: {{email}}",
+    "title": "Contact Me",
+    "phone": "Phone: {{phone}}",
+    "email": "Email: {{email}}",
     "intro": "I enjoy building things that work and are fun to use, and I like working in a team best. Clean code and good collaboration matter to me, and I’m always curious about new ideas.",
-    "introExample": "Feel free to get in touch about job offers, project enquiries or questions about my projects.",
-    "formTitle": "Let us work together!",
+    "introExample": "Feel free to get in touch about job offers, project inquiries or questions about my projects.",
+    "formTitle": "Let's Work Together!",
     "nameLabel": "Your name",
     "namePlaceholder": "Your name",
     "nameRequired": "Please enter your name.",
-    "emailLabel": "Your Email",
-    "emailPlaceholder": "Your Email",
+    "emailLabel": "Your email",
+    "emailPlaceholder": "Your email",
     "emailRequired": "Please enter your email.",
     "emailInvalid": "Please enter a valid email address.",
-    "messageLabel": "Your Message",
+    "messageLabel": "Your message",
     "messagePlaceholder": "Your message",
     "messageRequired": "Please enter a message.",
     "privacyBefore": "I've read the",

@@ -1,6 +1,8 @@
 <section class="content legal-page">
   <a class="back-link" routerLink="/" [attr.aria-label]="'common.backHome' | translate">
-    <img src="/icons/mobile_arrow_back.svg" alt="" width="34" height="16" />
+    <svg viewBox="0 0 34 16" width="34" height="16" aria-hidden="true">
+      <use href="/icons/mobile_arrow_back.svg#icon" />
+    </svg>
   </a>
 
   @if (currentLang() === 'de') {
@@ -49,10 +51,10 @@
             es sich z.&nbsp;B. um Daten handeln, die Sie in ein Kontaktformular eingeben.
           </p>
           <p>
-            Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website
-            durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.&nbsp;B.
-            Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser
-            Daten erfolgt automatisch, sobald Sie diese Website betreten.
+            Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst.
+            Das sind vor allem technische Daten (z.&nbsp;B. Internetbrowser, Betriebssystem oder
+            Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie
+            diese Website betreten.
           </p>
         </section>
 
@@ -60,10 +62,8 @@
           <h4>Wofür nutzen wir Ihre Daten?</h4>
           <p>
             Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu
-            gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.
-            Sofern über die Website Verträge geschlossen oder angebahnt werden können, werden die
-            übermittelten Daten auch für Vertragsangebote, Bestellungen oder sonstige
-            Auftragsanfragen verarbeitet.
+            gewährleisten. Daten, die Sie über das Kontaktformular oder per E-Mail übermitteln,
+            werden zur Bearbeitung Ihrer Anfrage verwendet.
           </p>
         </section>
 
@@ -106,13 +106,8 @@
           >.
         </p>
         <p>
-          Die Verwendung von Hetzner erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir
-          haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer
-          Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung
-          ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG, soweit
-          die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im
-          Endgerät des Nutzers (z.&nbsp;B. Device-Fingerprinting) im Sinne des TDDDG umfasst. Die
-          Einwilligung ist jederzeit widerrufbar.
+          Die Verwendung von Hetzner erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben
+          ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website.
         </p>
 
         <section>
@@ -207,16 +202,13 @@
       <section>
         <h3>Empfänger von personenbezogenen Daten</h3>
         <p>
-          Im Rahmen unserer Geschäftstätigkeit arbeiten wir mit verschiedenen externen Stellen
-          zusammen. Dabei ist teilweise auch eine Übermittlung von personenbezogenen Daten an diese
-          externen Stellen erforderlich. Wir geben personenbezogene Daten nur dann an externe
-          Stellen weiter, wenn dies im Rahmen einer Vertragserfüllung erforderlich ist, wenn wir
-          gesetzlich hierzu verpflichtet sind (z.&nbsp;B. Weitergabe von Daten an Steuerbehörden),
-          wenn wir ein berechtigtes Interesse nach Art. 6 Abs. 1 lit. f DSGVO an der Weitergabe
-          haben oder wenn eine sonstige Rechtsgrundlage die Datenweitergabe erlaubt. Beim Einsatz
-          von Auftragsverarbeitern geben wir personenbezogene Daten unserer Kunden nur auf
-          Grundlage eines gültigen Vertrags über Auftragsverarbeitung weiter. Im Falle einer
-          gemeinsamen Verarbeitung wird ein Vertrag über gemeinsame Verarbeitung geschlossen.
+          Wir geben personenbezogene Daten nur dann an externe Stellen weiter, wenn dies zur
+          Bereitstellung dieser Website erforderlich ist, wenn wir gesetzlich hierzu verpflichtet
+          sind, wenn wir ein berechtigtes Interesse nach Art. 6 Abs. 1 lit. f DSGVO an der
+          Weitergabe haben oder wenn eine sonstige Rechtsgrundlage die Datenweitergabe erlaubt. Beim
+          Einsatz von Auftragsverarbeitern geben wir personenbezogene Daten nur auf Grundlage eines
+          gültigen Vertrags über Auftragsverarbeitung weiter. Welche externen Stellen das sind, ist
+          in den folgenden Abschnitten beschrieben.
         </p>
       </section>
 
@@ -333,10 +325,10 @@
         <h3>SSL- bzw. TLS-Verschlüsselung</h3>
         <p>
           Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher
-          Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber
-          senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie
-          daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem
-          Schloss-Symbol in Ihrer Browserzeile.
+          Inhalte, wie zum Beispiel Anfragen über das Kontaktformular, eine SSL- bzw.
+          TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die
+          Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem Schloss-Symbol
+          in Ihrer Browserzeile.
         </p>
         <p>
           Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns
@@ -362,48 +354,9 @@
       <section>
         <h3>Cookies</h3>
         <p>
-          Unsere Internetseiten verwenden so genannte „Cookies“. Cookies sind kleine Datenpakete und
-          richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die
-          Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem
-          Endgerät gespeichert. Session-Cookies werden nach Ende Ihres Besuchs automatisch
-          gelöscht. Permanente Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese selbst
-          löschen oder eine automatische Löschung durch Ihren Webbrowser erfolgt.
-        </p>
-        <p>
-          Cookies können von uns (First-Party-Cookies) oder von Drittunternehmen stammen (sog.
-          Third-Party-Cookies). Third-Party-Cookies ermöglichen die Einbindung bestimmter
-          Dienstleistungen von Drittunternehmen innerhalb von Webseiten (z.&nbsp;B. Cookies zur
-          Abwicklung von Zahlungsdienstleistungen).
-        </p>
-        <p>
-          Cookies haben verschiedene Funktionen. Zahlreiche Cookies sind technisch notwendig, da
-          bestimmte Webseitenfunktionen ohne diese nicht funktionieren würden (z.&nbsp;B. die
-          Warenkorbfunktion oder die Anzeige von Videos). Andere Cookies können zur Auswertung des
-          Nutzerverhaltens oder zu Werbezwecken verwendet werden.
-        </p>
-        <p>
-          Cookies, die zur Durchführung des elektronischen Kommunikationsvorgangs, zur
-          Bereitstellung bestimmter, von Ihnen erwünschter Funktionen (z.&nbsp;B. für die
-          Warenkorbfunktion) oder zur Optimierung der Website (z.&nbsp;B. Cookies zur Messung des
-          Webpublikums) erforderlich sind (notwendige Cookies), werden auf Grundlage von Art. 6 Abs.
-          1 lit. f DSGVO gespeichert, sofern keine andere Rechtsgrundlage angegeben wird. Der
-          Websitebetreiber hat ein berechtigtes Interesse an der Speicherung von notwendigen
-          Cookies zur technisch fehlerfreien und optimierten Bereitstellung seiner Dienste. Sofern
-          eine Einwilligung zur Speicherung von Cookies und vergleichbaren
-          Wiedererkennungstechnologien abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf
-          Grundlage dieser Einwilligung (Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG); die
-          Einwilligung ist jederzeit widerrufbar.
-        </p>
-        <p>
-          Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert
-          werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle
-          oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des
-          Browsers aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser
-          Website eingeschränkt sein.
-        </p>
-        <p>
-          Sofern weitere Cookies und Dienste auf dieser Website eingesetzt werden, können Sie dies
-          dieser Datenschutzerklärung entnehmen.
+          Diese Website setzt keine Cookies. Einzelne Einstellungen werden lediglich im lokalen
+          Speicher Ihres Browsers abgelegt. Einzelheiten finden Sie im Abschnitt „Lokale Speicherung
+          von Einstellungen (Local Storage)“.
         </p>
       </section>
 
@@ -477,12 +430,12 @@
       </section>
 
       <section>
-        <h3>Anfrage per E-Mail, Telefon oder Telefax</h3>
+        <h3>Anfrage per E-Mail oder Telefon</h3>
         <p>
-          Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive
-          aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der
-          Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir
-          nicht ohne Ihre Einwilligung weiter.
+          Wenn Sie uns per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller
+          daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung
+          Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre
+          Einwilligung weiter.
         </p>
         <p>
           Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern
@@ -507,8 +460,10 @@
         <p>
           Anfragen, die Sie über das Kontaktformular senden, werden an ein E-Mail-Postfach bei Gmail
           zugestellt und dort gespeichert. Anbieter ist die Google Ireland Limited, Gordon House,
-          Barrow Street, Dublin 4, Irland. Eine Übermittlung von Daten in die USA kann dabei nicht
-          ausgeschlossen werden.
+          Barrow Street, Dublin 4, Irland. Dabei können Daten auch an die Google LLC in den USA
+          übermittelt werden. Die Google LLC ist nach dem EU-US Data Privacy Framework (DPF)
+          zertifiziert. Die Übermittlung erfolgt auf Grundlage des Angemessenheitsbeschlusses der
+          EU-Kommission (Art. 45 DSGVO).
         </p>
         <p>
           Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein
@@ -535,9 +490,11 @@
         </p>
         <p>
           Damit diese Inhalte angezeigt werden können, stellt Ihr Browser eine direkte Verbindung zu
-          den Servern dieser Anbieter her. Dabei wird Ihre IP-Adresse übertragen. Eine Übermittlung
-          von Daten in die USA kann nicht ausgeschlossen werden. Auf die weitere Verarbeitung durch
-          die Anbieter haben wir keinen Einfluss.
+          den Servern dieser Anbieter her. Dabei wird Ihre IP-Adresse übertragen, gegebenenfalls
+          auch an Server in den USA. GitHub, Cloudflare und Google (Firebase) sind nach dem EU-US
+          Data Privacy Framework (DPF) zertifiziert. Die Übermittlung erfolgt auf Grundlage des
+          Angemessenheitsbeschlusses der EU-Kommission (Art. 45 DSGVO). Auf die weitere Verarbeitung
+          durch die Anbieter haben wir keinen Einfluss.
         </p>
         <p>
           Die Nutzung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein
@@ -572,6 +529,7 @@
       </section>
     </section>
 
+    <p>Stand: November 2026</p>
     <p>
       Quelle:
       <a href="https://www.e-recht24.de" target="_blank" rel="noopener noreferrer"
@@ -623,10 +581,9 @@
             example, be data that you enter into a contact form.
           </p>
           <p>
-            Other data is collected automatically or after your consent by our IT systems when you
-            visit the website. This is mainly technical data (e.g. internet browser, operating
-            system or time of the page view). This data is collected automatically as soon as you
-            enter this website.
+            Other data is collected automatically by our IT systems when you visit the website. This
+            is mainly technical data (e.g. internet browser, operating system or time of the page
+            view). This data is collected automatically as soon as you enter this website.
           </p>
         </section>
 
@@ -634,9 +591,7 @@
           <h4>What do we use your data for?</h4>
           <p>
             Part of the data is collected to ensure that the website is provided without errors.
-            Other data may be used to analyse your user behaviour. If contracts can be concluded or
-            initiated via the website, the transmitted data is also processed for contract offers,
-            orders or other order requests.
+            Data you send via the contact form or by email is used to handle your enquiry.
           </p>
         </section>
 
@@ -680,11 +635,7 @@
         </p>
         <p>
           Hetzner is used on the basis of Art. 6(1)(f) GDPR. We have a legitimate interest in
-          presenting our website as reliably as possible. If consent has been requested,
-          processing is carried out exclusively on the basis of Art. 6(1)(a) GDPR and Section 25(1)
-          TDDDG, insofar as the consent includes the storage of cookies or access to information
-          on the user's device (e.g. device fingerprinting) within the meaning of the TDDDG.
-          Consent can be revoked at any time.
+          presenting our website as reliably as possible.
         </p>
 
         <section>
@@ -773,15 +724,12 @@
       <section>
         <h3>Recipients of personal data</h3>
         <p>
-          In the course of our business activities, we work with various external parties. In
-          some cases, this also requires the transfer of personal data to these external parties.
-          We only pass on personal data to external parties if this is necessary to fulfil a
-          contract, if we are legally obliged to do so (e.g. disclosure of data to tax
-          authorities), if we have a legitimate interest in the disclosure in accordance with Art.
-          6(1)(f) GDPR or if another legal basis permits the disclosure of data. When using
-          processors, we only pass on our customers' personal data on the basis of a valid data
-          processing agreement. In the case of joint processing, a joint processing agreement is
-          concluded.
+          We only pass on personal data to external parties if this is necessary to provide this
+          website, if we are legally obliged to do so, if we have a legitimate interest in the
+          disclosure in accordance with Art. 6(1)(f) GDPR or if another legal basis permits the
+          disclosure. When using processors, we only pass on personal data on the basis of a valid
+          data processing agreement. The external parties involved are described in the following
+          sections.
         </p>
       </section>
 
@@ -893,10 +841,9 @@
         <h3>SSL or TLS encryption</h3>
         <p>
           For security reasons and to protect the transmission of confidential content, such as
-          orders or enquiries that you send to us as the site operator, this site uses SSL or TLS
-          encryption. You can recognise an encrypted connection by the fact that the address bar
-          of the browser changes from "http://" to "https://" and by the lock symbol in your
-          browser bar.
+          enquiries via the contact form, this site uses SSL or TLS encryption. You can recognise an
+          encrypted connection by the fact that the address bar of the browser changes from
+          "http://" to "https://" and by the lock symbol in your browser bar.
         </p>
         <p>
           If SSL or TLS encryption is activated, the data you transmit to us cannot be read by
@@ -921,45 +868,8 @@
       <section>
         <h3>Cookies</h3>
         <p>
-          Our website uses so-called "cookies". Cookies are small data packets and do not cause
-          any damage to your device. They are stored on your device either temporarily for the
-          duration of a session (session cookies) or permanently (persistent cookies). Session
-          cookies are automatically deleted at the end of your visit. Persistent cookies remain
-          stored on your device until you delete them yourself or your web browser deletes them
-          automatically.
-        </p>
-        <p>
-          Cookies can come from us (first-party cookies) or from third-party companies (so-called
-          third-party cookies). Third-party cookies enable the integration of certain services
-          from third-party companies within websites (e.g. cookies for processing payment
-          services).
-        </p>
-        <p>
-          Cookies have various functions. Many cookies are technically necessary, as certain
-          website functions would not work without them (e.g. the shopping cart function or the
-          display of videos). Other cookies can be used to evaluate user behaviour or for
-          advertising purposes.
-        </p>
-        <p>
-          Cookies that are required to carry out the electronic communication process, to provide
-          certain functions you have requested (e.g. the shopping cart function) or to optimise
-          the website (e.g. cookies to measure the web audience) (necessary cookies) are stored on
-          the basis of Art. 6(1)(f) GDPR, unless another legal basis is stated. The website
-          operator has a legitimate interest in storing necessary cookies for the technically
-          error-free and optimised provision of its services. If consent to the storage of cookies
-          and comparable recognition technologies has been requested, processing is carried out
-          exclusively on the basis of this consent (Art. 6(1)(a) GDPR and Section 25(1) TDDDG);
-          consent can be revoked at any time.
-        </p>
-        <p>
-          You can set your browser so that you are informed about the setting of cookies and only
-          allow cookies in individual cases, exclude the acceptance of cookies for certain cases
-          or in general, and activate the automatic deletion of cookies when closing the browser.
-          If cookies are deactivated, the functionality of this website may be limited.
-        </p>
-        <p>
-          If other cookies and services are used on this website, you can find this information in
-          this privacy policy.
+          This website does not use cookies. Individual settings are only saved in the local storage
+          of your browser. Details can be found in the section "Local storage of settings".
         </p>
       </section>
 
@@ -1028,11 +938,11 @@
       </section>
 
       <section>
-        <h3>Enquiries by email, telephone or fax</h3>
+        <h3>Enquiries by email or telephone</h3>
         <p>
-          If you contact us by email, telephone or fax, your enquiry, including all resulting
-          personal data (name, enquiry), will be stored and processed by us for the purpose of
-          processing your request. We will not pass on this data without your consent.
+          If you contact us by email or telephone, your enquiry, including all resulting personal
+          data (name, enquiry), will be stored and processed by us for the purpose of processing
+          your request. We will not pass on this data without your consent.
         </p>
         <p>
           This data is processed on the basis of Art. 6(1)(b) GDPR if your enquiry is related to
@@ -1054,7 +964,9 @@
         <p>
           Enquiries you send via the contact form are delivered to and stored in an email inbox at
           Gmail. The provider is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4,
-          Ireland. A transfer of data to the USA cannot be ruled out.
+          Ireland. Data may also be transferred to Google LLC in the USA. Google LLC is certified
+          under the EU-U.S. Data Privacy Framework (DPF). The transfer is based on the adequacy
+          decision of the European Commission (Art. 45 GDPR).
         </p>
         <p>
           This is based on Art. 6(1)(f) GDPR. We have a legitimate interest in handling your
@@ -1079,9 +991,11 @@
           Street, San Francisco, CA 94107, USA.
         </p>
         <p>
-          To display this content, your browser connects directly to the servers of these
-          providers, which transmits your IP address. A transfer of data to the USA cannot be ruled
-          out. We have no influence on further processing by the providers.
+          To display this content, your browser connects directly to the servers of these providers,
+          which transmits your IP address. Data may be transferred to the USA. GitHub, Cloudflare
+          and Google (Firebase) are certified under the EU-U.S. Data Privacy Framework (DPF). The
+          transfer is based on the adequacy decision of the European Commission (Art. 45 GDPR). We
+          have no influence on further processing by the providers.
         </p>
         <p>
           This is based on Art. 6(1)(f) GDPR. We have a legitimate interest in displaying the
@@ -1115,6 +1029,7 @@
       </section>
     </section>
 
+    <p>Last updated: November 2026</p>
     <p>
       Source:
       <a href="https://www.e-recht24.de" target="_blank" rel="noopener noreferrer"

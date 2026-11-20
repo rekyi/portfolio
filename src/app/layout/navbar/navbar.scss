@@ -44,12 +44,15 @@ nav {
   }
 }
 
-.logo img {
+.logo app-logo {
   width: auto;
   height: 4rem;
 
   @include desktop {
     height: 4.5rem;
+
+    --color-logo: var(--background);
+    --color-logo-core: var(--background);
   }
 }
 

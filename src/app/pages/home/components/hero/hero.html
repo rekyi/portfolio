@@ -10,7 +10,7 @@
   </div>
 
   <div class="intro">
-    <img class="logo" src="/icons/logo_placeholder.gif" alt="" width="57" height="72" />
+    <app-logo class="logo" [isAnimated]="true" />
     <h1>Blub</h1>
     <p class="job-title"><app-stable-text key="hero.jobTitle" /></p>
     <a
@@ -19,7 +19,9 @@
       fragment="about"
       [attr.aria-label]="'hero.scrollDown' | translate"
     >
-      <img src="/icons/arrow_mob.svg" alt="" width="16" height="34" />
+      <svg viewBox="0 0 16 34" width="16" height="34" aria-hidden="true">
+        <use href="/icons/arrow_mob.svg#icon" />
+      </svg>
     </a>
 
     <app-social-links class="social" />

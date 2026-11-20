@@ -46,9 +46,11 @@ section {
   }
 }
 
-.scroll-top img {
+.scroll-top svg {
   width: auto;
   height: 2.125rem;
+
+  color: var(--primary-clr);
 
   @include desktop {
     height: 3.3125rem;

@@ -8,7 +8,7 @@
     "ariaLabel": "Hauptmenü",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
-    "about": "Warum ich",
+    "about": "Warum Ich",
     "skills": "Skills",
     "projects": "Projekte",
     "contact": "Kontakt",
@@ -31,7 +31,7 @@
     "scrollDown": "Zu „Warum ich“ scrollen"
   },
   "about": {
-    "title": "Warum ich",
+    "title": "Warum Ich",
     "iAm": "Ich bin",
     "statements": {
       "location": " in Blub ansässig",

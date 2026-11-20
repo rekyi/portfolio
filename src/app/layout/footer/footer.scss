@@ -35,9 +35,12 @@ footer {
   }
 }
 
-.logo img {
+.logo app-logo {
   width: auto;
   height: 4.375rem;
+
+  --color-logo: var(--background);
+  --color-logo-core: var(--background);
 
   @include desktop {
     height: 4.1875rem;

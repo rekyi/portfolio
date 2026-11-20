@@ -5,13 +5,14 @@ import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { filter, map } from 'rxjs';
 import { LanguageService } from '../../core/services/language';
+import { Logo } from '../../shared/components/logo/logo';
 import { StableText } from '../../shared/components/stable-text/stable-text';
 import { LanguageCode } from '../../shared/models/language.model';
 import { LANGUAGES } from './navbar.data';
 
 @Component({
   host: { '[class.is-home]': 'isHome()' },
-  imports: [RouterLink, TranslatePipe, UpperCasePipe, StableText],
+  imports: [RouterLink, TranslatePipe, UpperCasePipe, Logo, StableText],
   selector: 'app-navbar',
   styleUrl: './navbar.scss',
   templateUrl: './navbar.html',
