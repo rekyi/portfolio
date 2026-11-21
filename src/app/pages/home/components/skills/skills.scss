@@ -115,6 +115,7 @@ section {
 
   grid-area: title;
   justify-self: center;
+  text-align: center;
 
   @include desktop {
     color: var(--color-white);
