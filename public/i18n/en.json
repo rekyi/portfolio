@@ -93,8 +93,8 @@
     }
   },
   "testimonials": {
-    "title": "Need a Team Player?",
-    "subtitle": "Here's What My Colleagues Say About Me",
+    "title": "Need a team player?",
+    "subtitle": "Here's what my colleagues say about me",
     "project": "Project",
     "linkedin": "LinkedIn Profile",
     "quotes": {
@@ -107,7 +107,7 @@
     "title": "Contact Me",
     "phone": "Phone: {{phone}}",
     "email": "Email: {{email}}",
-    "intro": "I enjoy building things that work and are fun to use, and I like working in a team best. Clean code and good collaboration matter to me, and I’m always curious about new ideas.",
+    "intro": "I enjoy building things that work, are fun to use, and I like working in a team best. Clean code and good collaboration matter to me, and I’m always curious about new ideas.",
     "introExample": "Feel free to get in touch about job offers, project inquiries or questions about my projects.",
     "formTitle": "Let's Work Together!",
     "nameLabel": "Your name",

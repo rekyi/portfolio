@@ -4,6 +4,11 @@
     "backHome": "Zurück zur Startseite",
     "letsTalk": "Kontakt"
   },
+  "pageTitle": {
+    "home": "Startseite",
+    "legalNotice": "Impressum",
+    "privacyPolicy": "Datenschutz"
+  },
   "nav": {
     "ariaLabel": "Hauptmenü",
     "openMenu": "Menü öffnen",
