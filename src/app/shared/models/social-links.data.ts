@@ -10,8 +10,8 @@ const EMAIL_LINK: SocialLink = {
       hover: '/icons/desktop_email_hero_2.svg',
     },
     footer: {
-      default: '/icons/mobile_footer_mail_2.svg',
-      hover: '/icons/mobile_footer_mail_1.svg',
+      default: '/icons/mobile_footer_mail_1.svg',
+      hover: '/icons/mobile_footer_mail_2.svg',
     },
   },
 };
@@ -26,8 +26,8 @@ const GITHUB_LINK: SocialLink = {
       hover: '/icons/desktop_github_hero_2.svg',
     },
     footer: {
-      default: '/icons/mobile_footer_github_2.svg',
-      hover: '/icons/mobile_footer_github_1.svg',
+      default: '/icons/mobile_footer_github_1.svg',
+      hover: '/icons/mobile_footer_github_2.svg',
     },
   },
 };
@@ -42,8 +42,8 @@ const LINKEDIN_LINK: SocialLink = {
       hover: '/icons/desktop_linkedin_hero_2.svg',
     },
     footer: {
-      default: '/icons/mobile_footer_linkedin_2.svg',
-      hover: '/icons/mobile_footer_linkedin_1.svg',
+      default: '/icons/mobile_footer_linkedin_1.svg',
+      hover: '/icons/mobile_footer_linkedin_2.svg',
     },
   },
 };
