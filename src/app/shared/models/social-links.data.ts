@@ -31,4 +31,19 @@ export const SOCIAL_LINKS: SocialLink[] = [
       },
     },
   },
+  {
+    labelKey: 'social.linkedin',
+    url: 'https://www.linkedin.com',
+    isExternal: true,
+    icons: {
+      hero: {
+        default: '/icons/desktop_linkedin_hero_1.svg',
+        hover: '/icons/desktop_linkedin_hero_2.svg',
+      },
+      footer: {
+        default: '/icons/mobile_footer_linkedin_2.svg',
+        hover: '/icons/mobile_footer_linkedin_1.svg',
+      },
+    },
+  },
 ];
