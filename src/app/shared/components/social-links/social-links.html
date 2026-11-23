@@ -1,5 +1,5 @@
 <ul class="links" [class.horizontal]="variant() === 'footer'">
-  @for (link of links; track link.url) {
+  @for (link of links(); track link.url) {
     <li>
       <a
         class="link"
