@@ -48,6 +48,7 @@ const LINKEDIN_LINK: SocialLink = {
   },
 };
 
+/** Social links per placement, in display order. */
 export const SOCIAL_LINKS: Record<SocialLinkVariant, SocialLink[]> = {
   hero: [EMAIL_LINK, GITHUB_LINK, LINKEDIN_LINK],
   footer: [GITHUB_LINK, EMAIL_LINK, LINKEDIN_LINK],

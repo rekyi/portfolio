@@ -8,6 +8,7 @@ const PLACEHOLDER_TECHNOLOGIES: Skill[] = [
   TECHNOLOGIES.javascript,
 ];
 
+/** Projects in tab order. */
 export const PROJECTS: Project[] = [
   {
     titleKey: 'projects.hollowbloom.title',

@@ -5,6 +5,7 @@ import { Logo } from '../../../../shared/components/logo/logo';
 import { SocialLinks } from '../../../../shared/components/social-links/social-links';
 import { StableText } from '../../../../shared/components/stable-text/stable-text';
 
+/** Full-viewport landing section with animated logo, intro text and social links. */
 @Component({
   imports: [RouterLink, TranslatePipe, Logo, SocialLinks, StableText],
   selector: 'app-hero',

@@ -1,5 +1,6 @@
 import { Skill } from './skill.model';
 
+/** Shared technology definitions, reused by the skills section and the project tech stacks. */
 export const TECHNOLOGIES = {
   angular: { name: 'Angular', icon: { src: '/icons/desktop_angular.svg', width: 57, height: 60 } },
   typescript: { name: 'TypeScript', icon: { src: '/icons/desktop_ts.svg', width: 60, height: 60 } },

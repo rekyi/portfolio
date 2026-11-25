@@ -1,5 +1,6 @@
 import { AboutStatement } from '../../../../shared/models/about-statement.model';
 
+/** Statements cycled by the typewriter animation in the about section. */
 export const ABOUT_STATEMENTS: AboutStatement[] = [
   {
     id: 'location',

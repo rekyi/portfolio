@@ -1,5 +1,6 @@
 import { Testimonial } from '../../../../shared/models/testimonial.model';
 
+/** Testimonials in display order. */
 export const TESTIMONIALS: Testimonial[] = [
   {
     name: 'Blub',

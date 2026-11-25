@@ -3,6 +3,7 @@ import { StableText } from '../../../../shared/components/stable-text/stable-tex
 import { TestimonialCard } from './testimonial-card/testimonial-card';
 import { TESTIMONIALS } from './testimonials.data';
 
+/** Testimonials section with quotes from former team members. */
 @Component({
   imports: [StableText, TestimonialCard],
   selector: 'app-testimonials',
@@ -10,5 +11,6 @@ import { TESTIMONIALS } from './testimonials.data';
   templateUrl: './testimonials.html',
 })
 export class Testimonials {
+  /** Testimonials in display order. */
   protected readonly testimonials = TESTIMONIALS;
 }

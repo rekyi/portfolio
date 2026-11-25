@@ -6,6 +6,7 @@ import { Projects } from './components/projects/projects';
 import { Testimonials } from './components/testimonials/testimonials';
 import { Contact } from './components/contact/contact';
 
+/** One-page home that stacks all portfolio sections. */
 @Component({
   imports: [Hero, About, Skills, Projects, Testimonials, Contact],
   selector: 'app-home',

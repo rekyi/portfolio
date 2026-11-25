@@ -8,6 +8,7 @@ import { SectionTitle } from '../../../../shared/components/section-title/sectio
 import { StableText } from '../../../../shared/components/stable-text/stable-text';
 import { ContactRequest, SendStatus } from '../../../../shared/models/contact.model';
 
+/** Contact section with a reactive form that sends messages via {@link ContactService}. */
 @Component({
   imports: [
     RouterLink,
@@ -24,9 +25,16 @@ import { ContactRequest, SendStatus } from '../../../../shared/models/contact.mo
 export class Contact {
   private readonly contactService = inject(ContactService);
 
+  /** Whether a request is in flight; prevents double submits. */
   protected readonly isSending = signal(false);
+
+  /** Result of the last send attempt, shown as feedback below the form. */
   protected readonly sendStatus = signal<SendStatus>('idle');
 
+  /**
+   * Contact form: text fields validate on blur, the privacy checkbox on change.
+   * `website` is a hidden honeypot field that only bots fill in.
+   */
   protected readonly contactForm = new FormGroup({
     name: new FormControl('', {
       nonNullable: true,
@@ -51,6 +59,7 @@ export class Contact {
     }),
   });
 
+  /** Sends the form if it is valid and no request is pending. */
   protected handleSubmit(): void {
     if (this.contactForm.invalid || this.isSending()) return;
     this.isSending.set(true);
@@ -61,21 +70,29 @@ export class Contact {
     });
   }
 
+  /** Scrolls the window back to the top of the page. */
   protected scrollToTop(): void {
     window.scrollTo({ top: 0 });
   }
 
+  /**
+   * Builds the request payload from the form values.
+   *
+   * @returns All form values except the privacy checkbox.
+   */
   private getContactRequest(): ContactRequest {
     const { name, email, message, website } = this.contactForm.getRawValue();
     return { name, email, message, website };
   }
 
+  /** Shows the success message and resets the form. */
   private handleSendSuccess(): void {
     this.isSending.set(false);
     this.sendStatus.set('success');
     this.contactForm.reset();
   }
 
+  /** Shows the error message and keeps the input for another attempt. */
   private handleSendError(): void {
     this.isSending.set(false);
     this.sendStatus.set('error');

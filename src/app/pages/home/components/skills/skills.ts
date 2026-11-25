@@ -5,6 +5,7 @@ import { SectionTitle } from '../../../../shared/components/section-title/sectio
 import { StableText } from '../../../../shared/components/stable-text/stable-text';
 import { LEARNING_SKILLS, SKILLS } from './skills.data';
 
+/** Skills section with the current tech stack and the technologies being learned. */
 @Component({
   imports: [PrimaryButton, RouterLink, SectionTitle, StableText],
   selector: 'app-skills',
@@ -12,6 +13,9 @@ import { LEARNING_SKILLS, SKILLS } from './skills.data';
   templateUrl: './skills.html',
 })
 export class Skills {
+  /** Technologies of the current tech stack. */
   protected readonly skills = SKILLS;
+
+  /** Technologies currently being learned. */
   protected readonly learningSkills = LEARNING_SKILLS;
 }

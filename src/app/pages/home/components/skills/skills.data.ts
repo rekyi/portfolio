@@ -1,6 +1,7 @@
 import { Skill } from '../../../../shared/models/skill.model';
 import { TECHNOLOGIES } from '../../../../shared/models/technologies.data';
 
+/** Technologies of the current tech stack, in display order. */
 export const SKILLS: Skill[] = [
   TECHNOLOGIES.angular,
   TECHNOLOGIES.typescript,
@@ -12,6 +13,7 @@ export const SKILLS: Skill[] = [
   TECHNOLOGIES.git,
 ];
 
+/** Technologies currently being learned. */
 export const LEARNING_SKILLS: Skill[] = [
   { name: 'Cat', icon: { src: '/images/learning_skill_placeholder_1.gif', width: 64, height: 64 } },
   {

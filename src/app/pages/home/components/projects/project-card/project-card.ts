@@ -4,6 +4,7 @@ import { StableText } from '../../../../../shared/components/stable-text/stable-
 import { Project } from '../../../../../shared/models/project.model';
 import { ProjectSlider } from '../project-slider/project-slider';
 
+/** Card with image slider, details and live/GitHub links of one project. */
 @Component({
   imports: [PrimaryButton, StableText, ProjectSlider],
   selector: 'app-project-card',
@@ -11,5 +12,6 @@ import { ProjectSlider } from '../project-slider/project-slider';
   templateUrl: './project-card.html',
 })
 export class ProjectCard {
+  /** Project to display; optional fields hide their block when missing. */
   readonly project = input.required<Project>();
 }
