@@ -167,12 +167,12 @@ section {
 
 h1 {
   font-family: var(--font-headline);
-  font-size: clamp(2.25rem, 12.8vw, 3rem);
+  font-size: clamp(2rem, 10vw, 3rem);
   font-weight: 400;
   line-height: 1;
 
   @include desktop {
-    font-size: clamp(3rem, 6.1vw, 5.5rem);
+    font-size: clamp(3rem, 5vw, 4.5rem);
   }
 }
 
