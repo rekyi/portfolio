@@ -1,19 +1,12 @@
 import { Project } from '../../../../shared/models/project.model';
-import { Skill } from '../../../../shared/models/skill.model';
 import { TECHNOLOGIES } from '../../../../shared/models/technologies.data';
-
-const PLACEHOLDER_TECHNOLOGIES: Skill[] = [
-  TECHNOLOGIES.html,
-  TECHNOLOGIES.css,
-  TECHNOLOGIES.javascript,
-];
 
 /** Projects in tab order. */
 export const PROJECTS: Project[] = [
   {
     titleKey: 'projects.hollowbloom.title',
     durationKey: 'projects.hollowbloom.duration',
-    technologies: PLACEHOLDER_TECHNOLOGIES,
+    technologies: [TECHNOLOGIES.html, TECHNOLOGIES.css, TECHNOLOGIES.javascript],
     aboutKey: 'projects.hollowbloom.about',
     workProcessKey: 'projects.hollowbloom.workProcess',
     learningsKey: 'projects.hollowbloom.learnings',
@@ -28,7 +21,7 @@ export const PROJECTS: Project[] = [
   {
     titleKey: 'projects.pokedex.title',
     durationKey: 'projects.pokedex.duration',
-    technologies: PLACEHOLDER_TECHNOLOGIES,
+    technologies: [TECHNOLOGIES.html, TECHNOLOGIES.css, TECHNOLOGIES.javascript],
     aboutKey: 'projects.pokedex.about',
     workProcessKey: 'projects.pokedex.workProcess',
     learningsKey: 'projects.pokedex.learnings',
@@ -42,7 +35,7 @@ export const PROJECTS: Project[] = [
   {
     titleKey: 'projects.join.title',
     durationKey: 'projects.join.duration',
-    technologies: PLACEHOLDER_TECHNOLOGIES,
+    technologies: [TECHNOLOGIES.angular, TECHNOLOGIES.typescript, TECHNOLOGIES.supabase],
     aboutKey: 'projects.join.about',
     workProcessKey: 'projects.join.workProcess',
     groupWorkKey: 'projects.join.groupWork',
@@ -52,7 +45,7 @@ export const PROJECTS: Project[] = [
   },
   {
     titleKey: 'projects.ongoing.title',
-    technologies: PLACEHOLDER_TECHNOLOGIES,
+    technologies: [TECHNOLOGIES.html, TECHNOLOGIES.css, TECHNOLOGIES.javascript],
     isOngoing: true,
     aboutKey: 'projects.ongoing.about',
     images: ['/images/projects/project_card_placeholder_4.webp'],
