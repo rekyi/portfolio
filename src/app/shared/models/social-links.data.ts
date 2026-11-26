@@ -34,7 +34,7 @@ const GITHUB_LINK: SocialLink = {
 
 const LINKEDIN_LINK: SocialLink = {
   labelKey: 'social.linkedin',
-  url: 'https://www.linkedin.com',
+  url: 'https://www.linkedin.com/in/benjamin-cramer-801992310/',
   isExternal: true,
   icons: {
     hero: {
