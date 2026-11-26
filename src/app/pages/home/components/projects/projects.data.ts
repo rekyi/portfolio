@@ -47,7 +47,7 @@ export const PROJECTS: Project[] = [
     workProcessKey: 'projects.join.workProcess',
     groupWorkKey: 'projects.join.groupWork',
     images: ['/images/projects/project_card_placeholder_3.webp'],
-    liveUrl: 'blub',
+    liveUrl: 'https://join.rekyi.de',
     githubUrl: 'blub',
   },
   {
